@@ -56,6 +56,10 @@ export default defineNuxtConfig({
                 {
                     src: baseUrl + 'scripts/prism.js',
                     'data-manual': true
+                },
+                {
+                    src: baseUrl + 'scripts/prefersDark.js',
+                    tagPosition: 'bodyOpen'
                 }
             ]
         }

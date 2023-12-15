@@ -4,7 +4,7 @@ import Wind from '@/presets/wind';
 
 const $appStatePlugin = {
     install: (app) => {
-        const _appState = reactive({ preset: 'lara', darkMode: false, codeSandbox: false, sourceType: 'options-api', newsActive: false, announcement: null, storageKey: 'primevue-tailwind' });
+        const _appState = reactive({ preset: 'lara', darkMode: undefined, codeSandbox: false, sourceType: 'options-api', newsActive: false, announcement: null, storageKey: 'primevue-tailwind' });
 
         watch(
             () => _appState.preset,
