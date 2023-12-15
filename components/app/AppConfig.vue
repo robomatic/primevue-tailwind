@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-[2.5rem] right-0 hidden w-[14rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+    <div class="absolute top-[2.5rem] right-0 hidden w-[18rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
         <div class="flex-col justify-start items-start gap-2 inline-flex w-full">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Preset</span>
             <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-100 dark:bg-surface-900 w-full">
@@ -24,6 +24,17 @@
                     @click="setPreset('wind')"
                 >
                     Wind
+                </button>
+                <button
+                    type="button"
+                    class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                    :class="{
+                        'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isRay,
+                        'bg-surface-100 dark:bg-surface-900': !isRay
+                    }"
+                    @click="setPreset('ray')"
+                >
+                    Ray
                 </button>
             </div>
         </div>
@@ -157,6 +168,9 @@ export default {
         },
         isWind() {
             return this.$appState.preset === 'wind';
+        },
+        isRay() {
+            return this.$appState.preset === 'ray';
         }
     }
 };
