@@ -142,9 +142,16 @@ export default {
             this.unbindScrollListener();
         }
     },
+    beforeMount() {
+        // get the dark mode from what is set by prefersDark plugin /public/scrips/prefersDark
+        this.$appState.darkMode = document.documentElement.classList.contains('dark')
+    },
     methods: {
         onMenuButtonClick(event) {
             this.$emit('menubutton-click', event);
+        },
+        saveDarkModePreference(mode) {
+            localStorage.darkMode = mode === true ? 'true' : 'false'
         },
         toggleDarkMode() {
             if (!document.startViewTransition) {
@@ -165,6 +172,7 @@ export default {
             }
 
             this.$appState.darkMode = !this.$appState.darkMode;
+            this.saveDarkModePreference(this.$appState.darkMode)
         },
         bindScrollListener() {
             if (!this.scrollListener) {
