@@ -28,7 +28,7 @@ export default defineNuxtConfig({
             ripple: true,
             unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/lara/') }
+        importPT: { from: '../presets/ray/' }
     },
     app: {
         baseURL: baseUrl,
