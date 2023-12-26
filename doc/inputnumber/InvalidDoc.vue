@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
+        <InputNumber v-model="value" mode="decimal" :minFractionDigits="2" :pt="{ invalid: true }" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: null,
             code: {
                 basic: `
-<InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
+<InputNumber v-model="value" mode="decimal" :minFractionDigits="2" :pt="{ invalid: true }" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
+        <InputNumber v-model="value" mode="decimal" :minFractionDigits="2" :pt="{ invalid: true }" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
+        <InputNumber v-model="value" mode="decimal" :minFractionDigits="2" :pt="{ invalid: true }" />
     </div>
 </template>
 

@@ -21,21 +21,22 @@ export default {
     container: ({ props, state }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-6',
 
             // Flex
             'flex items-center flex-wrap',
-            'gap-1',
+            'gap-2',
 
             // Spacing
-            'm-0 list-none',
-            'px-3 py-1',
-            { 'px-3 py-1.5': !props.multiple, 'px-3 py-1': props.multiple },
+            'm-0',
+            'px-3 py-[0.5685rem]',
+
             // Size
             'w-full',
 
             // Shape
-            'appearance-none rounded-md',
+            'list-none',
+            'rounded-sm',
 
             // Color
             'text-surface-900 dark:text-surface-0',
@@ -44,26 +45,34 @@ export default {
             'shadow-sm',
 
             // States
+            'ring-1 ring-inset ring-offset-0',
             'focus:outline-none focus:outline-offset-0',
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused, 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
+            {
+                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': state.focused && !props.pt?.invalid,
+                'ring-2 ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
+                'ring-2': state.focused,
+                'ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
+                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid
+            },
 
             // Transition
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-text overflow-hidden'
+            'cursor-text overflow-hidden',
+            'appearance-none'
         ]
     }),
     inputtoken: ({ props }) => ({
-        class: [{ 'py-1.5 px-0': !props.multiple, 'p-0.5': props.multiple }, , 'inline-flex flex-auto']
+        class: [{ 'py-2.5 px-0': !props.multiple, 'p-0.5': props.multiple }, , 'inline-flex flex-auto']
     }),
     input: ({ props }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-none',
 
             // Shape
-            'appearance-none rounded-md',
+            'appearance-none rounded-sm',
             { 'rounded-tr-none rounded-br-none': props.dropdown },
             { 'outline-none shadow-none rounded-none': props.multiple },
 
@@ -72,19 +81,24 @@ export default {
 
             // Spacing
             'm-0',
-            { 'py-1.5 px-3': !props.multiple, 'p-0': props.multiple },
+            { 'py-2.5 px-3': !props.multiple, 'p-0': props.multiple },
 
             // Colors
             {
                 'text-surface-700 dark:text-white/80': !props.multiple,
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
-                'border border-surface-300 dark:border-surface-700': !props.multiple,
+                'border': !props.multiple,
                 'text-surface-700 dark:text-white/80': props.multiple,
-                'border-0 bg-transparent': props.multiple
+                'border-0 bg-transparent': props.multiple,
             },
 
             // States
-            { 'focus:outline-none focus:outline-offset-0 focus:ring-inset focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400': !props.multiple },
+            'focus:outline-none focus:outline-offset-0',
+            {
+                'focus:outline-none focus:outline-offset-0 focus:ring-inset focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400': !props.multiple,
+                'border-red-500 dark:border-red-600': props.pt?.invalid,
+                'border-surface-300 dark:border-surface-700': !props.pt?.invalid
+            },
 
             // Transition
             'transition-colors duration-200'
@@ -96,10 +110,11 @@ export default {
             'inline-flex items-center',
 
             // Spacing
+            '-my-1',
             'py-0.5 px-3',
 
             // Shape
-            'rounded-[1.14rem]',
+            'rounded-full',
 
             // Colors
             'text-surface-700 dark:text-white/70',
@@ -112,7 +127,7 @@ export default {
     removeTokenIcon: {
         class: [
             // Shape
-            'rounded-md leading-6',
+            'rounded-sm leading-6',
 
             // Spacing
             'ml-2',
@@ -139,7 +154,7 @@ export default {
                 'rounded-r-md',
 
                 // Size
-                'px-2.5 py-1.5',
+                'px-3 py-2.5',
                 '-ml-[1px]',
 
                 // Colors
@@ -165,7 +180,7 @@ export default {
 
             // Shape
             'border-0',
-            'rounded-md',
+            'rounded-sm',
             'shadow-md',
             'max-h-[15rem]',
             'overflow-auto',
@@ -182,7 +197,7 @@ export default {
     item: ({ context }) => ({
         class: [
             // Font
-            'sm:text-sm',
+            'text-base',
             'leading-none',
             { 'font-normal': !context.selected, 'font-bold': context.selected },
 
@@ -195,7 +210,7 @@ export default {
 
             // Spacing
             'm-0',
-            'py-2 px-4',
+            'px-5 py-3',
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
@@ -215,11 +230,11 @@ export default {
         class: [
             //Font
             'font-bold',
-            'sm:text-sm',
+            'text-base',
 
             // Spacing
             'm-0',
-            'py-2 px-4',
+            'px-5 py-3',
 
             // Color
             'text-surface-800 dark:text-white/80',
@@ -233,10 +248,10 @@ export default {
         class: [
             // Font
             'leading-none',
-            'sm:text-sm',
+            'text-base',
 
             // Spacing
-            'py-2 px-4',
+            'px-5 py-3',
 
             // Color
             'text-surface-800 dark:text-white/80',

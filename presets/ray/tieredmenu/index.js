@@ -2,7 +2,7 @@ export default {
     root: {
         class: [
             // Shape
-            'rounded-md',
+            'rounded-sm',
 
             // Size
             'min-w-[12rem]',
@@ -30,7 +30,7 @@ export default {
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-md',
+            'rounded-sm',
             
             // Colors
             {

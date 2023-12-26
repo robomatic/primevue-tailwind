@@ -2,10 +2,6 @@ export default {
     accordiontab: {
         header: ({ props }) => ({
             class: [
-                // Sizing
-                'pt-6 pb-0',
-                'mt-6',
-
                 // Shape
                 'border-x-0 border-b-0',
 
@@ -18,6 +14,9 @@ export default {
         }),
         headerAction: ({ context }) => ({
             class: [
+                // Sizing
+                'py-6',
+
                 //Font
                 'font-semibold',
                 'leading-7',
@@ -27,7 +26,7 @@ export default {
                 'relative',
 
                 // Shape
-                'rounded-md',
+                'rounded-sm',
 
                 // Color
                 'bg-transparent',
@@ -52,7 +51,7 @@ export default {
                 'leading-7',
 
                 // Spacing
-                'pr-12 pt-2',
+                'pr-12',
 
                 // Color
                 'text-surface-600 dark:text-surface-0/70'

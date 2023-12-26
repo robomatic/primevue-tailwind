@@ -1,32 +1,35 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, parent }) => ({
         class: [
             // Display
             'inline-flex',
+            "gap-px",
 
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
 
-            //Sizing
+            // Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
 
-            'ring-1 ring-surface-300 dark:ring-surface-700 ring-offset-0',
+            'ring-1 ring-offset-0 ring-surface-400 dark:ring-surface-700',
+
+            // Shape
             'shadow-sm',
-            'rounded-md'
+            'rounded-sm'
         ]
     }),
     input: {
         root: ({ parent }) => ({
             class: [
                 //Text
-                'sm:text-sm',
+                'text-base',
                 { 'text-center': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Spacing
                 'm-0',
-                'py-1.5 px-3',
+                'py-2.5 px-3',
 
                 // Shape
-                'rounded-md',
+                'rounded-sm',
                 { 'rounded-tr-none rounded-br-none': parent.props.showButtons },
                 { 'rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
@@ -40,8 +43,13 @@ export default {
                 { 'border-y border-surface-300 dark:border-surface-700': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // States
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500',
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:focus:ring-primary-500',
+                'ring-1 ring-inset ring-offset-0',
+                'outline-none',
+                'focus:ring-2',
+                {
+                    'ring-surface-300 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !parent.props.pt?.invalid,
+                    'ring-danger-500 dark:ring-danger-600 focus:ring-danger-500 focus:dark:ring-danger-600': parent.props.pt?.invalid
+                },
 
                 //Position
                 { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }
@@ -80,7 +88,7 @@ export default {
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Shape
-                'rounded-md',
+                'rounded-sm',
                 { 'rounded-tl-none rounded-br-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-bl-none rounded-tl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-bl-none rounded-br-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
@@ -124,7 +132,7 @@ export default {
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Shape
-                'rounded-md',
+                'rounded-sm',
                 { 'rounded-tr-none rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-tr-none rounded-br-none ': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-tr-none rounded-tl-none ': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },

@@ -1,3 +1,7 @@
+import radioButtonConfig from '../radiobutton';
+import checkboxConfig from '../checkbox';
+import checkbox from '../checkbox';
+
 export default {
     root: ({ props }) => ({
         class: [
@@ -28,8 +32,8 @@ export default {
     }),
     header: ({ props }) => ({
         class: [
-            'bg-slate-50 text-slate-700 border-surface-200 font-bold p-4',
-            'dark:border-surface-700 dark:text-white/80 dark:bg-surface-900', // Dark Mode
+            'bg-surface-50 text-surface-700 border-surface-200 font-bold p-4',
+            'dark:border-surface-700 dark:text-white/80 dark:bg-surface-950', // Dark Mode
             props.showGridlines ? 'border-x border-t border-b-0' : 'border-y border-x-0'
         ]
     }),
@@ -39,7 +43,7 @@ export default {
     thead: ({ context }) => ({
         class: [
             {
-                'bg-slate-50 top-0 z-[1]': context.scrollable
+                'bg-surface-50 top-0 z-[1]': context.scrollable
             }
         ]
     }),
@@ -53,13 +57,13 @@ export default {
     tfoot: ({ context }) => ({
         class: [
             {
-                'bg-slate-50 bottom-0 z-[1]': context.scrollable
+                'bg-surface-50 bottom-0 z-[1]': context.scrollable
             }
         ]
     }),
     footer: {
         class: [
-            'bg-slate-50 text-slate-700 border-t-0 border-b border-x-0 border-surface-200 font-bold p-4',
+            'bg-surface-50 text-surface-700 border-t-0 border-b border-x-0 border-surface-200 font-bold p-4',
             'dark:border-surface-700 dark:text-white/80 dark:bg-surface-900' // Dark Mode
         ]
     },
@@ -69,8 +73,8 @@ export default {
                 'text-left border-0 border-b border-solid border-surface-200 dark:border-surface-700 font-bold',
                 'transition duration-200',
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4', // Size
-                context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-slate-50 text-slate-700', // Sort
-                context.sorted ? 'dark:text-white/80 dark:bg-primary-300' : 'dark:text-white/80 dark:bg-surface-900', // Dark Mode
+                context.sorted ? 'bg-surface-50 text-primary-600' : 'bg-surface-100 text-surface-700', // Sort
+                context.sorted ? 'dark:bg-surface-950/70 dark:text-primary-500' : 'dark:bg-surface-900/50 dark:text-white/80', // Dark Mode
                 {
                     'sticky z-[1]': props.frozen || props.frozen === '', // Frozen Columns
                     'border-x border-y': context?.showGridlines,
@@ -95,7 +99,7 @@ export default {
         footercell: ({ context }) => ({
             class: [
                 'text-left border-0 border-b border-solid border-surface-200 font-bold',
-                'bg-slate-50 text-slate-700',
+                'bg-surface-50 text-surface-700',
                 'transition duration-200',
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4', // Size
                 'dark:text-white/80 dark:bg-surface-900 dark:border-surface-700', // Dark Mode
@@ -105,7 +109,7 @@ export default {
             ]
         }),
         sorticon: ({ context }) => ({
-            class: ['ml-2', context.sorted ? 'text-primary-700 dark:text-white/80' : 'text-slate-700 dark:text-white/70']
+            class: ['ml-2', context.sorted ? 'text-primary-600 dark:text-primary-500' : 'text-surface-700 dark:text-white/70']
         }),
         sortbadge: {
             class: [
@@ -120,7 +124,7 @@ export default {
         },
         filteroverlay: {
             class: [
-                'bg-surface-0 text-surface-600 border-0 rounded-md min-w-[12.5rem]',
+                'bg-surface-0 text-surface-600 border-0 rounded-sm min-w-[12.5rem]',
                 'dark:bg-surface-900 dark:border-surface-700 dark:text-white/80' //Dark Mode
             ]
         },
@@ -137,7 +141,7 @@ export default {
         }),
         filteroperator: {
             class: [
-                'px-5 py-3 border-b border-solid border-surface-200 text-slate-700 bg-slate-50 rounded-t-md',
+                'px-5 py-3 border-b border-solid border-surface-200 text-surface-700 bg-surface-50 rounded-t-md',
                 'dark:border-surface-700 dark:text-white/80 dark:bg-surface-900' // Dark Mode
             ]
         },
@@ -189,7 +193,7 @@ export default {
                 'inline-flex justify-center items-center cursor-pointer no-underline overflow-hidden relative ml-2',
                 'w-8 h-8 rounded-[50%]',
                 'transition duration-200',
-                'hover:text-slate-700 hover:bg-surface-300/20', // Hover
+                'hover:text-surface-700 hover:bg-surface-300/20', // Hover
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50', // Focus
                 'dark:text-white/70 dark:hover:text-white/80 dark:bg-surface-900', // Dark Mode
                 {
@@ -218,9 +222,9 @@ export default {
                 'text-left cursor-pointer select-none',
                 'w-8 h-8 border-0 rounded-[50%]',
                 'transition duration-200',
-                'text-slate-700 border-transparent',
+                'text-surface-700 border-transparent',
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50', //Focus
-                'hover:text-slate-700 hover:bg-surface-300/20', //Hover
+                'hover:text-surface-700 hover:bg-surface-300/20', //Hover
                 'dark:text-white/70' // Dark Mode
             ]
         },
@@ -230,9 +234,9 @@ export default {
                 'text-left cursor-pointer select-none',
                 'w-8 h-8 border-0 rounded-[50%]',
                 'transition duration-200',
-                'text-slate-700 border-transparent',
+                'text-surface-700 border-transparent',
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50', //Focus
-                'hover:text-slate-700 hover:bg-surface-300/20', //Hover
+                'hover:text-surface-700 hover:bg-surface-300/20', //Hover
                 'dark:text-white/70' // Dark Mode
             ]
         },
@@ -242,63 +246,32 @@ export default {
                 'text-left cursor-pointer select-none',
                 'w-8 h-8 border-0 rounded-[50%]',
                 'transition duration-200',
-                'text-slate-700 border-transparent',
+                'text-surface-700 border-transparent',
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50', //Focus
-                'hover:text-slate-700 hover:bg-surface-300/20', //Hover
+                'hover:text-surface-700 hover:bg-surface-300/20', //Hover
                 'dark:text-white/70' // Dark Mode
             ]
         },
-        radiobuttonwrapper: {
-            class: ['relative inline-flex cursor-pointer select-none align-bottom', 'w-6 h-6']
-        },
-        radiobutton: ({ context }) => ({
-            class: [
-                'flex justify-center items-center',
-                'border-2 w-6 h-6 text-surface-700 rounded-full transition duration-200 ease-in-out',
-                context.checked ? 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400' : 'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900',
-                {
-                    'hover:border-primary-500 dark:hover:border-primary-400 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': !context.disabled,
-                    'cursor-default opacity-60': context.disabled
+        radiobuttonwrapper: radioButtonConfig.root,
+        radiobutton: ({context}) => radioButtonConfig.input(
+            { 
+                props: {
+                    disabled: context.disabled,
+                    value: context.checked,
+                    modelValue: true
+                },
+                state: {
+                    focused: context.focused
                 }
-            ]
-        }),
-        radiobuttonicon: ({ context }) => ({
-            class: ['transform rounded-full', 'block w-3 h-3 transition duration-200 bg-surface-0 dark:bg-surface-900', { 'backface-hidden scale-10 invisible': context.checked === false, 'transform scale-100 visible': context.checked === true }]
-        }),
-        headercheckboxwrapper: {
-            class: ['cursor-pointer inline-flex relative select-none align-bottom', 'w-6 h-6']
-        },
-        headercheckbox: ({ context }) => ({
-            class: [
-                'flex items-center justify-center',
-                'border-2 w-6 h-6 text-surface-600 rounded-lg transition-colors duration-200',
-                context.checked ? 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400' : 'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900',
-                {
-                    'hover:border-primary-500 dark:hover:border-primary-400 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': !context.disabled,
-                    'cursor-default opacity-60': context.disabled
-                }
-            ]
-        }),
-        headercheckboxicon: {
-            class: 'w-4 h-4 transition-all duration-200 text-white text-base dark:text-surface-900'
-        },
-        checkboxwrapper: {
-            class: ['cursor-pointer inline-flex relative select-none align-bottom', 'w-6 h-6']
-        },
-        checkbox: ({ context }) => ({
-            class: [
-                'flex items-center justify-center',
-                'border-2 w-6 h-6 text-surface-600 rounded-lg transition-colors duration-200',
-                context.checked ? 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400' : 'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900',
-                {
-                    'hover:border-primary-500 dark:hover:border-primary-400 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': !context.disabled,
-                    'cursor-default opacity-60': context.disabled
-                }
-            ]
-        }),
-        checkboxicon: {
-            class: 'w-4 h-4 transition-all duration-200 text-white text-base dark:text-surface-900'
-        },
+            }
+        ),
+        radiobuttonicon: radioButtonConfig.icon,
+        headercheckboxwrapper: checkboxConfig.root,
+        headercheckbox: checkboxConfig.input,
+        headercheckboxicon: checkboxConfig.icon,
+        checkboxwrapper: checkboxConfig.root,
+        checkbox: checkboxConfig.input,
+        checkboxicon: checkboxConfig.icon,
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',

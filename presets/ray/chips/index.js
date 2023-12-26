@@ -3,27 +3,30 @@ export default {
         class: [
             'flex',
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
+                'opacity-60 select-none cursor-not-allowed': props.disabled,
+                'cursor-text': !props.disabled,
             }
         ]
     }),
-    container: ({ state }) => ({
+    container: ({ state, props }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-6',
 
             // Flex
-            'flex items-center flex-wrap gap-1',
+            'flex items-center flex-wrap',
+            'gap-2',
 
             // Spacing
-            'm-0 py-1 px-3',
+            'm-0',
+            'px-3 py-[0.5685rem]',
 
             // Size
             'w-full',
 
             // Shape
             'list-none',
-            'rounded-md',
+            'rounded-sm',
 
             // Color
             'text-surface-900 dark:text-surface-0',
@@ -32,24 +35,30 @@ export default {
             'shadow-sm',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused, 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
+            'ring-1 ring-inset ring-offset-0',
+            'focus:outline-none focus:outline-offset-0',
+            {
+                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
+                'ring-2': state.focused,
+                'ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
+                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid
+            },
 
             // Transition
-            'transition-colors duration-200',
+            'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-text overflow-hidden',
+            'overflow-hidden',
             'appearance-none'
         ]
     }),
-
     inputtoken: {
         class: ['py-0.5 px-0', 'inline-flex flex-auto']
     },
-    input: {
+    input: ({ props }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-none',
 
             // Size
             'w-full',
@@ -64,19 +73,26 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-transparent',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500'
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+
+            // Misc
+            {
+                'cursor-not-allowed': props.disabled,
+                'cursor-text': !props.disabled,
+            }
         ]
-    },
+    }),
     token: {
         class: [
             // Flexbox
             'inline-flex items-center',
 
             // Spacing
-            'py-0.5 px-3',
+            '-my-1',
+            'py-1.5 px-3',
 
             // Shape
-            'rounded-[1.14rem]',
+            'rounded-full',
 
             // Colors
             'text-surface-700 dark:text-white/70',
@@ -89,7 +105,7 @@ export default {
     removeTokenIcon: {
         class: [
             // Shape
-            'rounded-md leading-6',
+            'rounded-sm leading-6',
 
             // Spacing
             'ml-2',

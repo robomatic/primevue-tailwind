@@ -8,10 +8,10 @@ export default {
             'align-bottom',
 
             // Size
-            'w-4 h-4',
+            'w-6 h-6',
 
             // Misc
-            'cursor-default',
+            'cursor-pointer',
             'select-none'
         ]
     },
@@ -21,8 +21,8 @@ export default {
             'flex justify-center items-center',
 
             // Size
-            'w-4 h-4',
-            'text-sm',
+            'w-6 h-6',
+            'text-base',
             'font-medium',
 
             // Shape
@@ -31,20 +31,24 @@ export default {
 
             // Transition
             'transition duration-200 ease-in-out',
+            'shadow-inner',
 
             // Colors
             {
                 'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
                 'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
                 'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined,
-                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined
+                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined,
+                'border-double border-[10px] border-primary-500 dark:border-primary-500': props.value == props.modelValue && props.value !== undefined,
             },
+            { 'border-surface-300 dark:border-surface-700': props.value === undefined  },
 
             // States
             {
                 'outline-none outline-offset-0': !props.disabled && state.focused,
-                'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-primary-500 dark:ring-primary-400': !props.disabled && state.focused,
-                'opacity-60 cursor-default': props.disabled
+                'ring-1 ring-primary-400 dark:ring-primary-500': !props.disabled && state.focused && !props.pt?.invalid,
+                'opacity-60 cursor-default': props.disabled,
+                'ring-1 ring-danger-500 dark:ring-danger-600': props.pt?.invalid
             }
         ]
     }),

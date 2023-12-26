@@ -3,17 +3,17 @@ export default {
         class: [
             // Spacing and Shape
             'my-2 mx-0',
-            'rounded-md',
+            'rounded-sm',
             'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
 
             {
-                'text-blue-500 dark:text-blue-300': props.severity == 'info',
-                'text-green-500 dark:text-green-300': props.severity == 'success',
-                'text-orange-500 dark:text-orange-300': props.severity == 'warn',
-                'text-red-500 dark:text-red-300': props.severity == 'error'
+                'text-info-600 dark:text-info-500': props.severity == 'info',
+                'text-success-600 dark:text-success-500': props.severity == 'success',
+                'text-warning-600 dark:text-warning-500': props.severity == 'warn',
+                'text-danger-600 dark:text-danger-500': props.severity == 'error'
             }
         ]
     }),

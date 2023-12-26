@@ -24,15 +24,15 @@ export default {
             'rounded-full',
 
             // Color
-            'text-white dark:text-surface-900',
+            'text-white dark:text-white/60',
             {
-                'bg-primary-500 dark:bg-primary-400': props.severity == null || props.severity == 'primary',
-                'bg-surface-500 dark:bg-surface-400': props.severity == 'secondary',
-                'bg-green-500 dark:bg-green-400': props.severity == 'success',
-                'bg-blue-500 dark:bg-blue-400': props.severity == 'info',
-                'bg-orange-500 dark:bg-orange-400': props.severity == 'warning',
-                'bg-purple-500 dark:bg-purple-400': props.severity == 'help',
-                'bg-red-500 dark:bg-red-400': props.severity == 'danger'
+                'bg-primary-600 dark:bg-primary-700': props.severity == null || props.severity == 'primary',
+                'bg-surface-600 dark:bg-surface-700': props.severity == 'secondary',
+                'bg-success-600 dark:bg-success-700': props.severity == 'success',
+                'bg-info-600 dark:bg-info-700': props.severity == 'info',
+                'bg-warning-600 dark:bg-warning-700': props.severity == 'warning',
+                'bg-help-600 dark:bg-help-700': props.severity == 'help',
+                'bg-danger-600 dark:bg-danger-700': props.severity == 'danger'
             }
         ]
     })

@@ -8,8 +8,8 @@ export default {
             'align-bottom',
 
             // Size
-            'w-4',
-            'h-4',
+            'w-6',
+            'h-6',
 
             // Misc
             'cursor-default',
@@ -24,25 +24,29 @@ export default {
             'justify-center',
 
             // Size
-            'w-4',
-            'h-4',
+            'w-6',
+            'h-6',
 
             // Shape
-            'rounded',
+            'rounded-sm',
             'border',
 
             // Colors
             'text-surface-600',
             {
-                'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
+                'bg-surface-0 border-surface-300 dark:border-surface-700 dark:bg-surface-900': !context.checked,
+                'bg-primary-500 border-primary-500 dark:border-primary-500 dark:bg-primary-500': context.checked
             },
 
             // States
+            'ring-1',
             'focus:outline-none focus:outline-offset-0',
             {
-                'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
-                'cursor-default opacity-60': props.disabled
+                'ring-2': context.focused,
+                'ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused && !props.pt?.invalid,
+                'ring-surface-400 dark:ring-surface-700': !props.pt?.invalid,
+                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid,
+                'cursor-not-allowed opacity-60': props.disabled
             },
 
             // Transitions
@@ -56,11 +60,11 @@ export default {
             'text-normal',
 
             // Size
-            'w-3',
-            'h-3',
+            'w-4',
+            'h-4',
 
             // Colors
-            'text-white dark:text-surface-900',
+            'text-white dark:text-white/70',
 
             // Transitions
             'transition-all',

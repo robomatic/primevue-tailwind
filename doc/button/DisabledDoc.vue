@@ -4,6 +4,9 @@
     </DocSectionText>
     <div class="card flex justify-center">
         <Button label="Submit" disabled />
+        <Button label="Link" link disabled />
+        <Button label="Text" text disabled />
+        <Button label="Outlined" outlined disabled />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,11 +18,17 @@ export default {
             code: {
                 basic: `
 <Button label="Submit" disabled />
+<Button label="Link" link disabled />
+<Button label="Text" text disabled />
+<Button label="Outlined" outlined disabled />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <Button label="Submit" disabled />
+        <Button label="Link" link disabled />
+        <Button label="Text" text disabled />
+        <Button label="Outlined" outlined disabled />
     </div>
 </template>
 
@@ -30,6 +39,9 @@ export default {
 <template>
     <div class="card flex justify-center">
         <Button label="Submit" disabled />
+        <Button label="Link" link disabled />
+        <Button label="Text" text disabled />
+        <Button label="Outlined" outlined disabled />
     </div>
 </template>
 

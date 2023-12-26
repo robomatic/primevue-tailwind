@@ -36,7 +36,13 @@ export default {
             'rounded-lg',
 
             // Colors
-            'bg-primary-500 dark:bg-primary-400'
+            'bg-primary-500 dark:bg-primary-400 to-primary-600',
+            {
+                'bg-gradient-to-r': props.orientation == 'horizontal',
+                'bg-gradient-to-t': props.orientation == 'vertical',
+                'via-primary-500 from-primary-600': props.range,
+                'from-primary-500': !props.range
+            }
         ]
     }),
     handle: ({ props }) => ({
@@ -44,20 +50,19 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-5',
+            'w-5',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.625rem] ml-[-0.625rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.625rem] ml-[-0.625rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-primary-500 dark:bg-primary-500 bg-gradient-to-t from-primary-500 to-primary-400/90',
+            'border-primary-600 dark:border-primary-500',
 
             // States
             'focus:outline-none focus:outline-offset-0',
@@ -67,7 +72,7 @@ export default {
 
             // Misc
             'cursor-grab',
-            'touch-action-none'
+            'touch-action-none',
         ]
     }),
     starthandler: ({ props }) => ({
@@ -75,20 +80,20 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-5',
+            'w-5',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.625rem] ml-[-0.625rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.625rem] ml-[-0.625rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
+            'border-1',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-primary-500 dark:bg-primary-500 bg-gradient-to-t from-primary-500 to-primary-400/90',
+            'border-primary-600 dark:border-primary-500',
 
             // States
             'focus:outline-none focus:outline-offset-0',
@@ -106,20 +111,20 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-5',
+            'w-5',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.625rem] ml-[-0.625rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.625rem] ml-[-0.625rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
+            'border-1',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-primary-500 dark:bg-primary-500 bg-gradient-to-t from-primary-500 to-primary-400/90',
+            'border-primary-600 dark:border-primary-500',
 
             // States
             'focus:outline-none focus:outline-offset-0',

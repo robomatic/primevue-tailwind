@@ -1,35 +1,46 @@
 export default {
     root: ({ props }) => ({
-        class: ['shadow-sm', { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }]
+        class: [
+            'shadow-sm',
+            'rounded-sm',
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
+            {
+                'ring-1 ring-danger-500 dark:ring-danger-600': props.pt?.invalid
+            }
+        ]
     }),
-    button: ({ context }) => ({
+    button: ({ context, props }) => ({
         class: [
             'relative',
             // Font
-            'text-sm',
+            'text-base',
             'leading-none',
 
             // Flex Alignment
             'inline-flex items-center align-bottom text-center',
 
             // Spacing
-            'px-2.5 py-1.5',
+            'px-3 py-2.5',
 
             // Shape
-            'ring-1 ring-surface-200 dark:ring-surface-700',
-            'first:rounded-l-md first:rounded-tr-none first:rounded-br-none',
-            'last:rounded-tl-none last:rounded-bl-none last:rounded-r-md ',
+            'first:rounded-l-sm first:rounded-tr-none first:rounded-br-none',
+            'last:rounded-tl-none last:rounded-bl-none last:rounded-r-sm',
 
             // Color
             {
                 'bg-surface-0 dark:bg-surface-900': !context.active,
-                'text-surface-700 dark:text-white/80': !context.active,
-                'bg-surface-100 dark:bg-surface-700 border-primary-500 dark:border-primary-400': context.active
+                'text-surface-700 dark:text-surface-100/70': !context.active,
+                'bg-primary-200 dark:bg-primary-700 text-primary-700 dark:text-primary-100': context.active
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring-primary-500 dark:focus:ring-primary-400',
-            'hover:bg-surface-200 dark:hover:bg-surface-600/80',
+            'ring-inset',
+            {
+                'ring-1 ring-surface-300 dark:ring-surface-700 focus:ring-surface-500 dark:focus:ring-surface-500': !context.active,
+                'ring-1 ring-primary-300 dark:ring-primary-700 focus:ring-primary-500 dark:focus:ring-primary-500': context.active
+            },
+            'focus:outline-none focus:outline-offset-0',
+            'hover:bg-surface-100 dark:hover:bg-surface-600/80',
             { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
             // Transition

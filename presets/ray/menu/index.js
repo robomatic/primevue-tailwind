@@ -3,7 +3,7 @@ export default {
         class: [
             // Sizing and Shape
             'min-w-[12rem]',
-            'rounded-md',
+            'rounded-sm',
             // Spacing
             'p-1.5',
             // Colors
@@ -30,7 +30,7 @@ export default {
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-md',
+            'rounded-sm',
 
             // Colors
             {

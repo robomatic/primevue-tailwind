@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
+        <p>Invalid state style is added using the <i>invalid</i> pass-through to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card p-fluid">
-        <Chips v-model="value" class="p-invalid" />
+        <Chips v-model="value" :pt="{ invalid: true }" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: null,
             code: {
                 basic: `
-<Chips v-model="value" class="p-invalid" />
+<Chips v-model="value" :pt="{ invalid: true }" />
 `,
                 options: `
 <template>
     <div class="card p-fluid">
-        <Chips v-model="value" class="p-invalid" />
+        <Chips v-model="value" :pt="{ invalid: true }" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card p-fluid">
-        <Chips v-model="value" class="p-invalid" />
+        <Chips v-model="value" :pt="{ invalid: true }" />
     </div>
 </template>
 

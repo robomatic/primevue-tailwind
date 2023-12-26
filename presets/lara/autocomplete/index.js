@@ -49,6 +49,7 @@ export default {
             'focus:outline-none focus:outline-offset-0',
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },
+            
             // Transition
             'transition duration-200 ease-in-out',
 

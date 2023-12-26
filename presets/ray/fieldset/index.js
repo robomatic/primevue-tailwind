@@ -7,7 +7,7 @@ export default {
             'px-5 md:px-6 py-5',
 
             // Shape
-            'rounded-md rounded-lg',
+            'rounded-sm rounded-lg',
 
             // Color
             'bg-surface-0 dark:bg-surface-900',
@@ -25,7 +25,7 @@ export default {
             { 'p-0': props.toggleable, 'px-3 py-1.5': !props.toggleable },
 
             // Shape
-            'rounded-md',
+            'rounded-sm',
 
             // Color
             'text-surface-700 dark:text-surface-0/80',
@@ -50,7 +50,7 @@ export default {
             { 'px-3 py-1.5': props.toggleable },
 
             // Shape
-            { 'rounded-md': props.toggleable },
+            { 'rounded-sm': props.toggleable },
 
             // Color
             { 'text-surface-700 dark:text-surface-200 hover:text-surface-900 hover:text-surface-900': props.toggleable },

@@ -1,22 +1,28 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ state, props }) => ({
         class: [
             // Display and Position
             'inline-flex',
             'relative',
 
             // Shape
-            'w-full md:w-56',
-            'rounded-md',
+            'w-full md:w-fit',
+            'rounded-sm',
             'shadow-sm',
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             //TODO: Focus needs context/props. normally gets p-focus
             // States
-            'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+            'ring-1 ring-inset ring-offset-0',
+            'focus:outline-none',
+            {
+                'ring-inset ring-surface-400 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
+                'ring-2': state.focused,
+                'ring-primary-500 dark:ring-primary-600': state.focused && !props.pt?.invalid,
+                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid
+            },
 
             // Misc
             'cursor-default',
@@ -29,7 +35,7 @@ export default {
             //Font
             'font-sans',
             'leading-6',
-            'sm:text-sm',
+            'text-base',
 
             // Display
             'block',
@@ -42,7 +48,7 @@ export default {
 
             // Sizing and Spacing
             'w-[1%]',
-            'py-1.5 px-3',
+            'py-2.5 px-3',
             { 'pr-7': props.showClear },
 
             //Shape
@@ -92,8 +98,8 @@ export default {
 
             // Shape
             'border-0',
-            'rounded-md',
-            'shadow-md',
+            'rounded-sm',
+            'shadow-lg',
 
             // Color
             'bg-surface-0 dark:bg-surface-800',
@@ -133,11 +139,11 @@ export default {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-            { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+            { 'bg-primary-500 dark:bg-primary-600 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
             //States
-            'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+            'hover:bg-primary-500 dark:hover:bg-primary-600 hover:text-white dark:hover:text-white/70',
 
             // Misc
             'cursor-pointer',
