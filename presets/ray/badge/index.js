@@ -13,7 +13,7 @@ export default {
             'text-center inline-block',
 
             // Size
-            'p-0',
+            'px-1 p-0',
             {
                 'min-w-[1.5rem] h-[1.5rem]': props.size == null,
                 'min-w-[2.25rem] h-[2.25rem]': props.size == 'large',

@@ -3,14 +3,12 @@ export default {
         class: [
             // Display
             'inline-flex',
-            "gap-px",
 
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
 
             // Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
 
-            'ring-1 ring-offset-0 ring-surface-400 dark:ring-surface-700',
 
             // Shape
             'shadow-sm',
@@ -38,16 +36,13 @@ export default {
                 'text-surface-900 dark:text-surface-0',
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',
-                { 'border-r border-surface-300 dark:border-surface-700': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
-                { 'border-x border-surface-300 dark:border-surface-700': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
-                { 'border-y border-surface-300 dark:border-surface-700': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // States
                 'ring-1 ring-inset ring-offset-0',
                 'outline-none',
                 'focus:ring-2',
                 {
-                    'ring-surface-300 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !parent.props.pt?.invalid,
+                    'ring-surface-400 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !parent.props.pt?.invalid,
                     'ring-danger-500 dark:ring-danger-600 focus:ring-danger-500 focus:dark:ring-danger-600': parent.props.pt?.invalid
                 },
 
@@ -72,14 +67,15 @@ export default {
                 'justify-center',
                 'text-center align-bottom',
 
-                //Position
+                // Position
                 'relative',
                 { 'order-3': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'order-1': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
-                //Color
+                // Color
                 'text-surface-600 dark:text-surface-400',
                 'bg-surface-0 dark:bg-surface-800',
+                'border border-surface-300 dark:border-surface-700',
 
                 // Sizing
                 'w-[3rem]',
@@ -89,15 +85,15 @@ export default {
 
                 // Shape
                 'rounded-sm',
-                { 'rounded-tl-none rounded-br-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
+                { 'rounded-tl-none rounded-br-none rounded-bl-none border-b-0': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-bl-none rounded-tl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-bl-none rounded-br-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
-                //States
+                // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:dark:ring-primary-500',
                 'hover:bg-surface-50 dark:hover:bg-surface-700',
 
-                //Misc
+                // Misc
                 'cursor-pointer overflow-hidden select-none'
             ]
         }),
@@ -124,6 +120,7 @@ export default {
                 //Color
                 'text-surface-600 dark:text-surface-400',
                 'bg-surface-0 dark:bg-surface-800',
+                'border border-surface-300 dark:border-surface-700',
 
                 // Sizing
                 'w-[3rem]',
@@ -133,7 +130,7 @@ export default {
 
                 // Shape
                 'rounded-sm',
-                { 'rounded-tr-none rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
+                { 'rounded-tr-none rounded-tl-none rounded-bl-none border-t-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-tr-none rounded-br-none ': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-tr-none rounded-tl-none ': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 

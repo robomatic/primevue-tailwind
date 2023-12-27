@@ -1,6 +1,8 @@
 export default {
     root: ({ props, context }) => ({
         class: [
+            'relative',
+            
             // Font
             'font-sans leading-6',
 

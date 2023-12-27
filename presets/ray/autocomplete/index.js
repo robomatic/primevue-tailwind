@@ -28,8 +28,9 @@ export default {
             'gap-2',
 
             // Spacing
+            'relative',
             'm-0',
-            'px-3 py-[0.5685rem]',
+            'px-3 py-2.5',
 
             // Size
             'w-full',
@@ -48,7 +49,7 @@ export default {
             'ring-1 ring-inset ring-offset-0',
             'focus:outline-none focus:outline-offset-0',
             {
-                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': state.focused && !props.pt?.invalid,
+                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
                 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
                 'ring-2': state.focused,
                 'ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
@@ -96,7 +97,7 @@ export default {
             'focus:outline-none focus:outline-offset-0',
             {
                 'focus:outline-none focus:outline-offset-0 focus:ring-inset focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400': !props.multiple,
-                'border-red-500 dark:border-red-600': props.pt?.invalid,
+                'border-danger-500 dark:border-danger-600': props.pt?.invalid,
                 'border-surface-300 dark:border-surface-700': !props.pt?.invalid
             },
 
@@ -176,7 +177,6 @@ export default {
         class: [
             // Position
             'absolute top-0 left-0',
-            'mt-2',
 
             // Shape
             'border-0',

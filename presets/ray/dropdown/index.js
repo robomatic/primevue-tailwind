@@ -94,7 +94,6 @@ export default {
         class: [
             // Position
             'absolute top-0 left-0',
-            'mt-2',
 
             // Shape
             'border-0',

@@ -28,7 +28,7 @@ export default {
         ]
     }),
     value: {
-        class: 'leading-normal'
+        class: 'leading-1'
     },
     icon: {
         class: 'mr-1 text-sm'
