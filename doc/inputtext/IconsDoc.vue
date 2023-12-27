@@ -5,12 +5,12 @@
     <div class="card flex flex-wrap justify-center gap-3">
         <span class="relative">
             <InputText v-model="value1" placeholder="Search" class="pl-10" />
-            <i class="pi pi-search absolute top-2/4 -mt-1.5 left-3 text-surface-400 dark:text-surface-600" />
+            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
         </span>
 
         <span class="relative">
             <InputText v-model="value2" class="pr-10" />
-            <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-1.5 right-3 text-surface-400 dark:text-surface-600" />
+            <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-2 right-3 text-surface-400 dark:text-surface-600" />
         </span>
     </div>
     <DocSectionCode :code="code" />
