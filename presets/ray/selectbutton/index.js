@@ -28,19 +28,19 @@ export default {
 
             // Color
             {
-                'bg-surface-0 dark:bg-surface-900': !context.active,
+                'bg-surface-0 dark:bg-surface-900 hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
                 'text-surface-700 dark:text-surface-100/70': !context.active,
-                'bg-primary-200 dark:bg-primary-700 text-primary-700 dark:text-primary-100': context.active
+                'bg-primary-200 dark:bg-primary-700 text-primary-700 dark:text-primary-100 hover:bg-primary-300 dark:hover:bg-primary-600/80': context.active
             },
 
             // States
             'ring-inset',
             {
-                'ring-1 ring-surface-300 dark:ring-surface-700 focus:ring-surface-500 dark:focus:ring-surface-500': !context.active,
-                'ring-1 ring-primary-300 dark:ring-primary-700 focus:ring-primary-500 dark:focus:ring-primary-500': context.active
+                'ring-1 ring-surface-400 dark:ring-surface-700 focus:ring-surface-500 dark:focus:ring-surface-500': !context.active,
+                'ring-1 ring-primary-500 dark:ring-primary-600 focus:ring-primary-500 dark:focus:ring-primary-500': context.active
             },
             'focus:outline-none focus:outline-offset-0',
-            'hover:bg-surface-100 dark:hover:bg-surface-600/80',
+            ,
             { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
             // Transition

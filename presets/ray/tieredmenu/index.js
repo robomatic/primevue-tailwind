@@ -6,10 +6,10 @@ export default {
 
             // Size
             'min-w-[12rem]',
-            'p-1.5',
+            'py-1.5',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
             'ring-1 ring-surface-200 dark:ring-surface-700'
         ]
     },
@@ -24,7 +24,7 @@ export default {
     },
     menuitem: {
         class: [
-            'relative first:mt-0 mt-1'
+            'relative'
         ]
     },
     content: ({ context }) => ({
@@ -35,7 +35,7 @@ export default {
             // Colors
             {
                 'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+                'bg-surface-100 text-primary-500 dark:bg-surface-500/10 dark:text-primary-400': context.focused
             },
 
             // Transitions
@@ -44,7 +44,7 @@ export default {
 
             // States
             'hover:text-primary-600 dark:hover:text-primary-400 ',
-            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
+            'hover:bg-surface-100 dark:hover:bg-surface-500/20'
         ]
     }),
     action: {
@@ -52,14 +52,14 @@ export default {
             'relative',
 
             // Font
-            'font-semibold',
+            'font-medium',
 
             // Flexbox
             'flex',
             'items-center',
 
             // Spacing
-            'py-2',
+            'py-3',
             'px-3',
 
             // Misc
@@ -74,11 +74,11 @@ export default {
             // Spacing
             'mr-2',
             'leading-6',
-            'text-sm'
+            'text-base'
         ]
     },
     label: {
-        class: ['leading-none', 'text-sm']
+        class: ['leading-none', 'text-base']
     },
     submenuicon: {
         class: [

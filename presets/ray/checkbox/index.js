@@ -34,12 +34,12 @@ export default {
             // Colors
             'text-surface-600',
             {
-                'bg-surface-0 border-surface-300 dark:border-surface-700 dark:bg-surface-900': !context.checked,
+                'bg-surface-0 border-surface-400 dark:border-surface-700 dark:bg-surface-900': !context.checked,
                 'bg-primary-500 border-primary-500 dark:border-primary-500 dark:bg-primary-500': context.checked
             },
 
             // States
-            'ring-1',
+            'focus:ring-1',
             'focus:outline-none focus:outline-offset-0',
             {
                 'ring-2': context.focused,

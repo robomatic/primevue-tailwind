@@ -6,13 +6,16 @@ export default {
 
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
 
+            // Shape
+            { 'first:rounded-l-sm rounded-none last:rounded-r-sm': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'border-0 border-y border-l last:border-r border-surface-400 dark:border-surface-700': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
+
             // Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
 
-
             // Shape
             'shadow-sm',
-            'rounded-sm'
         ]
     }),
     input: {
@@ -32,14 +35,18 @@ export default {
                 { 'rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
+                { '!rounded-none': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+                { 'border-0': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+
                 // Colors
                 'text-surface-900 dark:text-surface-0',
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',
+                'border border-surface-400 dark:border-surface-700',
 
                 // States
-                'ring-1 ring-inset ring-offset-0',
-                'outline-none',
+                'focus:ring-1 focus:ring-inset focus:ring-offset-0',
+                'outline-none outline-offset-0',
                 'focus:ring-2',
                 {
                     'ring-surface-400 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !parent.props.pt?.invalid,

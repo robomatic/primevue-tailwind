@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props, context, parent }) => ({
         class: [
             'relative',
             
@@ -14,15 +14,21 @@ export default {
                 'py-2.5 px-3': props.size == null
             },
 
+            // Shape
+            { 'border rounded-sm': parent.instance.$name !== 'InputGroup' },
+            { 'first:rounded-l-sm rounded-none last:rounded-r-sm': parent.instance.$name == 'InputGroup' },
+            { 'border-y border-l last:border-r': parent.instance.$name == 'InputGroup' },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
+
             // Colors
             'text-surface-900 dark:text-surface-0',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-offset-0',
+            'border-surface-400 dark:border-surface-700',
+            'focus:ring-1 focus:ring-inset -focus:ring-offset-1',
             'shadow-sm',
 
             // Shape
-            'rounded-sm',
             'appearance-none',
 
             // Interactions

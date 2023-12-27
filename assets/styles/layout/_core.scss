@@ -1,8 +1,8 @@
 :root {
-    font-family: "Inter var", sans-serif;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     font-variation-settings: normal;
-    --font-family: "Inter var", sans-serif;
+    --font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-feature-settings: "cv02","cv03","cv04","cv11";
     --primary: 70 25 110;
     --primary-0: 255 255 255;
@@ -108,10 +108,6 @@
     --danger-800: 156 3 31;
     --danger-900: 101 2 20;
     --danger-950: 73 1 15;
-}
-
-html {
-    font-size: 14px;
 }
 
 body {

@@ -26,18 +26,17 @@ export default {
             'font-medium',
 
             // Shape
-            'border-2',
+            'border',
             'rounded-full',
 
             // Transition
             'transition duration-200 ease-in-out',
-            'shadow-inner',
 
             // Colors
             {
                 'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
                 'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
-                'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined,
+                'border-surface-400 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined,
                 'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined,
                 'border-double border-[10px] border-primary-500 dark:border-primary-500': props.value == props.modelValue && props.value !== undefined,
             },

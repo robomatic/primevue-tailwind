@@ -89,7 +89,7 @@ export default {
 
             // Shape
             'rounded-full',
-            'border-1',
+            'border',
 
             // Colors
             'bg-primary-500 dark:bg-primary-500 bg-gradient-to-t from-primary-500 to-primary-400/90',
@@ -120,7 +120,7 @@ export default {
 
             // Shape
             'rounded-full',
-            'border-1',
+            'border',
 
             // Colors
             'bg-primary-500 dark:bg-primary-500 bg-gradient-to-t from-primary-500 to-primary-400/90',

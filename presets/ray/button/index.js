@@ -1,7 +1,8 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props, context, parent }) => ({
         class: [
             'relative',
+            'leading-6',
 
             // Alignments
             'items-center justify-center inline-flex text-center align-bottom',
@@ -13,12 +14,17 @@ export default {
                 'px-[1.5rem] py-2.5 text-lg': props.size === 'large'
             },
             {
-                'h-12 w-12 p-0': props.label == null
+                'h-11 w-11 p-0': props.label == null
             },
 
             // Shapes
             { 'shadow-sm': !props.raised && !props.link && !props.text, 'shadow-lg': props.raised },
-            { 'rounded-sm': !props.rounded, 'rounded-full': props.rounded },
+            { 
+                'rounded-sm': !props.rounded && parent.instance.$name !== 'InputGroup',
+                'rounded-full': props.rounded
+            },
+            { 'rounded-none first:rounded-l-sm last:rounded-r-sm self-center': parent.instance.$name == 'InputGroup' },
+            'ring-inset',
 
             // Link Button
             { 'text-primary-600 dark:text-primary-500 bg-transparent ring-transparent': props.link && !context.disabled },
@@ -42,7 +48,7 @@ export default {
             // Primary Button
             {
                 'text-white dark:text-surface-950': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'before:text-primary-500 dark:before:text-primary-600 bg-primary-500 dark:bg-primary-600': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'bg-primary-500 dark:bg-primary-600': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-primary-500 dark:ring-primary-600': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
             },
             // Primary Text Button
@@ -53,7 +59,7 @@ export default {
             // Secondary Button
             {
                 'text-white dark:text-secondary-950': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
-                'before:text-secondary-500 dark:before:text-secondary-600 bg-secondary-500 dark:bg-secondary-600': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
+                'bg-secondary-500 dark:bg-secondary-600': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-secondary-500 dark:ring-secondary-600': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain
             },
             // Secondary Text Button
@@ -64,7 +70,7 @@ export default {
             // Success Button
             {
                 'text-white dark:text-surface-950': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
-                'before:text-success-500 dark:before:text-success-600 bg-success-500 dark:bg-success-600': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
+                'bg-success-500 dark:bg-success-600': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-success-500 dark:ring-success-600': props.severity === 'success' && !props.text && !props.outlined && !props.plain
             },
             // Success Text Button
@@ -75,7 +81,7 @@ export default {
             // Info Button
             {
                 'text-white dark:text-surface-950': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
-                'before:text-info-500 dark:before:text-info-600 bg-info-500 dark:bg-info-600': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
+                'bg-info-500 dark:bg-info-600': props.severity === 'info' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-info-500 dark:ring-info-600': props.severity === 'info' && !props.text && !props.outlined && !props.plain
             },
             // Info Text Button
@@ -86,7 +92,7 @@ export default {
             // Warning Button
             {
                 'text-white dark:text-surface-950': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
-                'before:text-warning-500 dark:before:text-warning-600 bg-warning-500 dark:bg-warning-600': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
+                'bg-warning-500 dark:bg-warning-600': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-warning-500 dark:ring-warning-600': props.severity === 'warning' && !props.text && !props.outlined && !props.plain
             },
             // Warning Text Button
@@ -97,7 +103,7 @@ export default {
             // Help Button
             {
                 'text-white dark:text-surface-950': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
-                'before:text-help-500 dark:before:text-help-600 bg-help-500 dark:bg-help-600': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
+                'bg-help-500 dark:bg-help-600': props.severity === 'help' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-help-500 dark:ring-help-600': props.severity === 'help' && !props.text && !props.outlined && !props.plain
             },
             // Help Text Button
@@ -107,8 +113,8 @@ export default {
 
             // Danger Button
             {
-                'text-white dark:text-surface-950': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
-                'before:text-danger-500 dark:before:text-danger-600 bg-danger-500 dark:bg-danger-500': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
+                'text-white dark:text-black': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
+                'bg-danger-500 dark:bg-danger-500': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-danger-500 dark:ring-danger-500': props.severity === 'danger' && !props.text && !props.outlined && !props.plain
             },
             // Danger Text Button
@@ -184,7 +190,7 @@ export default {
 
             // Misc
             'cursor-pointer overflow-hidden select-none',
-            { 'before:from-surface-100/20 before:via-current before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-soft-light before:w-full before:h-full before:absolute before:inset-0': !props.link && !context.disabled && !props.text && !props.outlined && !props.plain },
+            { 'before:from-surface-100/20 before:via-black/0 before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-hard-light before:w-full before:h-full before:absolute before:inset-0': !props.link && !context.disabled && !props.text && !props.outlined && !props.plain },
         ]
     }),
     label: ({ props }) => ({

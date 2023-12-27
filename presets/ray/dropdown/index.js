@@ -185,7 +185,7 @@ export default {
     header: {
         class: [
             // Spacing
-            'p-0',
+            'py-2.5 px-3',
             'm-0',
 
             //Shape
@@ -194,7 +194,8 @@ export default {
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-surface-100 dark:bg-surface-800'
+            'bg-surface-100 dark:bg-surface-800',
+            'border-surface-300 dark:border-surface-700'
         ]
     },
     filtercontainer: {
@@ -205,10 +206,10 @@ export default {
             // Font
             'font-sans',
             'leading-none',
-            'sm:text-sm',
+            'text-base',
 
             // Sizing
-            'py-1.5 px-3',
+            'py-2.5 px-3',
             'pr-7',
             '-mr-7',
             'w-full',
@@ -217,12 +218,11 @@ export default {
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
             'placeholder:text-surface-400',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
+            'ring-1 ring-inset ring-surface-400 dark:ring-surface-700',
 
             // Shape
             'border-0',
-            'rounded-tl-md',
-            'rounded-tr-md',
+            'rounded-sm',
             'appearance-none',
 
             // States
@@ -234,7 +234,7 @@ export default {
         ]
     },
     filtericon: {
-        class: ['absolute', 'top-1/2', '-mt-2']
+        class: ['absolute', 'top-1/2', 'right-2', '-mt-2']
     },
     clearicon: {
         class: [
