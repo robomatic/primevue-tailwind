@@ -25,7 +25,6 @@ export default {
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
             'border-surface-400 dark:border-surface-700',
-            'focus:ring-1 focus:ring-inset -focus:ring-offset-1',
             'shadow-sm',
 
             // Shape
@@ -33,12 +32,13 @@ export default {
 
             // Interactions
             {
+                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
                 'outline-none focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             },
 
             // States
-            'focus:ring-2',
+            'focus:ring-2 focus:ring-inset focus:-ring-offset-1',
             {
                 'ring-surface-400 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !props.pt?.invalid,
                 'ring-danger-500 dark:ring-danger-600 focus:ring-danger-500 focus:dark:ring-danger-600': props.pt?.invalid

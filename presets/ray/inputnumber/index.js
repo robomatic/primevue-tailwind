@@ -11,6 +11,7 @@ export default {
             { 'border-0 border-y border-l last:border-r border-surface-400 dark:border-surface-700': parent.instance.$name == 'InputGroup' && !props.showButtons },
             { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
+            'hover:border-primary-500 dark:hover:border-primary-400',
             // Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
 
@@ -45,9 +46,9 @@ export default {
                 'border border-surface-400 dark:border-surface-700',
 
                 // States
-                'focus:ring-1 focus:ring-inset focus:ring-offset-0',
+                'hover:border-primary-500 dark:hover:border-primary-400',
                 'outline-none outline-offset-0',
-                'focus:ring-2',
+                'focus:ring-2 focus:ring-inset focus:ring-offset-0',
                 {
                     'ring-surface-400 dark:ring-surface-700 focus:ring-primary-500 dark:focus:ring-primary-600': !parent.props.pt?.invalid,
                     'ring-danger-500 dark:ring-danger-600 focus:ring-danger-500 focus:dark:ring-danger-600': parent.props.pt?.invalid

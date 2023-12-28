@@ -3,6 +3,7 @@ export default {
         class: [
             // Shape
             'rounded-sm',
+            'shadow-lg',
 
             // Size
             'min-w-[12rem]',
