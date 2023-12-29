@@ -1,3 +1,5 @@
+import inputTextConfig from "../inputtext"
+
 export default {
     root: {
         class: [
@@ -96,41 +98,11 @@ export default {
     filtercontainer: {
         class: 'relative'
     },
-    filterinput: {
-        class: [
-            // Font
-            'font-sans',
-            'leading-none',
-
-            // Sizing
-            'pr-7 py-3 px-3',
-            '-mr-7',
-            'w-full',
-
-            //Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-900',
-            'border-0',
-
-            // Shape
-            'border',
-            'rounded-sm',
-            'appearance-none',
-
-            // Transitions
-            'transition',
-            'duration-200',
-
-            // States
-            'ring-1 ring-inset ring-surface-400 dark:ring-surface-600',
-            'hover:ring-primary-500 dark:hover:ring-primary-500',
-            'focus:ring focus:outline-none focus:outline-offset-0',
-            'focus:ring-primary-500/50 dark:focus:ring-primary-500/50',
-
-            // Misc
-            'appearance-none'
-        ]
-    },
+    filterinput: (() => {
+        const input = inputTextConfig.root({ props: {}, context: {}, parent: {} })
+        input.class.push('w-full')
+        return input
+    })(),
     filtericon: {
         class: ['absolute', 'top-1/2', '-mt-2', 'right-3']
     },

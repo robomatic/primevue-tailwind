@@ -51,7 +51,7 @@ export default {
                 'leading-7',
 
                 // Spacing
-                'pr-12',
+                'pr-12 pb-4',
 
                 // Color
                 'text-surface-600 dark:text-surface-0/70'

@@ -16,23 +16,23 @@ export default {
 
             // Colors
             {
-                'bg-info-100/60 dark:bg-info-500/20': props.message.severity == 'info',
-                'bg-success-100/60 dark:bg-success-500/20': props.message.severity == 'success',
-                'bg-warning-100/60 dark:bg-warning-500/20': props.message.severity == 'warn',
-                'bg-danger-100/60 dark:bg-danger-500/20': props.message.severity == 'error'
+                'bg-info-100/70 dark:bg-info-500/30': props.message.severity == 'info',
+                'bg-success-100/70 dark:bg-success-500/30': props.message.severity == 'success',
+                'bg-warning-100/70 dark:bg-warning-500/30': props.message.severity == 'warn',
+                'bg-danger-100/70 dark:bg-danger-500/30': props.message.severity == 'error',
             },
             {
                 'border-info-500 dark:border-info-400': props.message.severity == 'info',
                 'border-success-500 dark:border-success-400': props.message.severity == 'success',
                 'border-warning-500 dark:border-warning-400': props.message.severity == 'warn',
-                'border-danger-500 dark:border-danger-400': props.message.severity == 'error'
+                'border-danger-500 dark:border-danger-400': props.message.severity == 'error',
             },
             {
                 'text-info-700 dark:text-info-300': props.message.severity == 'info',
                 'text-success-700 dark:text-success-300': props.message.severity == 'success',
                 'text-warning-700 dark:text-warning-300': props.message.severity == 'warn',
-                'text-danger-700 dark:text-danger-300': props.message.severity == 'error'
-            }
+                'text-danger-700 dark:text-danger-300': props.message.severity == 'error',
+            },
         ]
     }),
     content: {

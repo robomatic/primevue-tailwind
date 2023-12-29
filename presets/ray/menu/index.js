@@ -5,7 +5,7 @@ export default {
             'min-w-[12rem]',
             'rounded-sm',
             // Spacing
-            'p-1.5',
+            'py-1.5',
             // Colors
             'bg-surface-0 dark:bg-surface-700',
             'text-surface-700 dark:text-white/80',

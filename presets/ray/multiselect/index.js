@@ -177,7 +177,11 @@ export default {
     filtercontainer: {
         class: 'relative w-full mx-2'
     },
-    filterinput: ({ state }) => inputTextConfig.root({ props: { value: state.filterValue }, context: {} }),
+    filterinput: ({ state, parent }) => {
+        const input = inputTextConfig.root({ props: { value: state.filterValue }, context: {}, parent })
+        input.class.push('w-full')
+        return input
+    },
     filtericon: {
         class: ['absolute', 'top-1/2', '-mt-2', 'right-4']
     },

@@ -17,7 +17,7 @@ export default {
 
             // Color
             'dark:border',
-            'dark:border-surface-700',
+            'dark:border-surface-800',
 
             // Maximized State
             {
@@ -45,7 +45,7 @@ export default {
             'rounded-tr-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
@@ -158,7 +158,7 @@ export default {
             },
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-600 dark:text-surface-0/70',
 
             // Misc
@@ -178,11 +178,11 @@ export default {
             'py-3',
 
             // Shape
-            'border-t-0',
+            'border-t border-surface-200 dark:border-surface-800',
             'rounded-b-lg',
 
             // Colors
-            'bg-surface-50 dark:bg-surface-700',
+            'bg-surface-50 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
@@ -194,7 +194,7 @@ export default {
             { 'p-5': !state.maximized },
 
             // Background and Effects
-            { 'bg-surface-500/70 dark:bg-surface-700/70': props.modal, 'backdrop-blur-sm': props.modal }
+            { 'bg-surface-100/70 dark:bg-surface-950/70': props.modal, 'backdrop-blur': props.modal }
         ]
     }),
     transition: ({ props }) => {

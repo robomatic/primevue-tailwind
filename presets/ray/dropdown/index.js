@@ -1,3 +1,5 @@
+import inputTextConfig from '../inputtext'
+
 export default {
     root: ({ state, props }) => ({
         class: [
@@ -9,66 +11,16 @@ export default {
             'w-full md:w-fit',
             'rounded-sm',
             'shadow-sm',
-
-            // Color and Background
-            'bg-surface-0 dark:bg-surface-900',
-
-            //TODO: Focus needs context/props. normally gets p-focus
-            // States
-            'ring-1 ring-inset ring-offset-0',
-            'focus:outline-none',
-            {
-                'ring-inset ring-surface-400 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
-                'ring-2': state.focused,
-                'ring-primary-500 dark:ring-primary-600': state.focused && !props.pt?.invalid,
-                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid
-            },
-
-            // Misc
-            'cursor-default',
-            'select-none',
-            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled }
         ]
     }),
-    input: ({ props }) => ({
-        class: [
-            //Font
-            'font-sans',
-            'leading-6',
-            'text-base',
-
-            // Display
-            'block',
-            'flex-auto',
-
-            // Color and Background
-            'bg-transparent',
-            'border-0',
-            'text-surface-800 dark:text-white/80',
-
-            // Sizing and Spacing
-            'w-[1%]',
-            'py-2.5 px-3',
-            { 'pr-7': props.showClear },
-
-            //Shape
-            'rounded-none',
-
-            // Transitions
-            'transition',
-            'duration-200',
-
-            // States
-            'focus:outline-none focus:shadow-none',
-
-            // Misc
-            'relative',
-            'cursor-pointer',
-            'overflow-hidden overflow-ellipsis',
-            'whitespace-nowrap',
-            'appearance-none'
-        ]
-    }),
+    input: ({ props }) => {
+        const input = inputTextConfig.root({})
+        input.class.push('block flex-auto w-[1%] rounded-tr-none rounded-br-none')
+        if (props.showClear) {
+            input.class.push('pr-7')
+        }
+        return input
+    },
     trigger: {
         class: [
             //Font
@@ -81,13 +33,16 @@ export default {
             // Color and Background
             'bg-transparent',
             'text-surface-500',
+            'ring-1 ring-inset ring-surface-400 dark:ring-surface-700',
 
             // Size
-            'w-12',
+            'w-10',
 
             // Shape
-            'rounded-tr-md',
-            'rounded-br-md'
+            'rounded-tr-sm',
+            'rounded-br-sm',
+
+            'cursor-pointer',
         ]
     },
     panel: {

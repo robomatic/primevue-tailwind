@@ -15,13 +15,13 @@ export default {
             },
 
             // Shape
-            'border-0 dark:border',
+            'border',
             'shadow-xl',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-white/80',
-            'dark:border-surface-700',
+            'border-surface-100 dark:border-surface-800',
 
             // Transitions
             'transition-transform',
@@ -41,7 +41,7 @@ export default {
             'px-6 pt-6',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
@@ -115,7 +115,7 @@ export default {
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'bg-surface-500/70 dark:bg-surface-700/70': props.modal, 'backdrop-blur-sm': props.modal }
+            { 'bg-surface-50/70 dark:bg-surface-950/70': props.modal, 'backdrop-blur': props.modal }
         ]
     }),
     transition: ({ props }) => {

@@ -1,3 +1,5 @@
+import inputTextConfig from '../inputtext'
+
 export default {
     root: ({ props }) => ({
         class: [
@@ -13,42 +15,7 @@ export default {
             }
         ]
     }),
-    input: ({ props, state }) => ({
-        class: [
-            // Font
-            'font-sans leading-none  sm:text-sm',
-
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-offset-0',
-            // Spacing
-            'm-0 py-2.5 px-3',
-            '-ml-[1px]',
-
-            // Shape
-            'appearance-none',
-            { 'rounded-sm': !props.showIcon || props.iconDisplay == 'input' },
-            { 'rounded-l-sm  flex-1 pr-9 ': props.showIcon && props.iconDisplay !== 'input' },
-            { 'rounded-sm flex-1 pr-9': props.showIcon && props.iconDisplay === 'input' },
-
-            // Transitions
-            'transition-colors',
-            'duration-200',
-
-            // States
-            'ring-1 ring-inset ring-offset-0',
-            'outline-none',
-            {
-                'ring-2': state.focused,
-                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
-                'focus:ring-primary-500 dark:focus:ring-primary-400': state.focus && !props.pt?.invalid,
-                'ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
-                'ring-danger-500 dark:ring-danger-700': props.pt?.invalid,
-            },
-        ]
-    }),
+    input: ({ props, parent }) => inputTextConfig.root({ props, context: { disabled: props.disabled }, parent }),
     inputicon: {
         class: ['sm:text-sm', 'absolute top-[50%] -mt-2', 'text-surface-600 dark:text-surface-200', 'right-[.75rem]']
     },

@@ -10,27 +10,33 @@ export default {
             'dark:bg-surface-900 dark:text-white/60 dark:border-surface-700' // Dark Mode
         ]
     },
+    pages: {
+        class: ['flex gap-1 md:gap-2']
+    },
     firstpagebutton: ({ context }) => buttonConfig.root({
-        props: { severity: null, text: true },
-        context
+        props: { size: null, severity: null, text: true },
+        context,
     }),
     previouspagebutton: ({ context }) => buttonConfig.root({
         props: { severity: null, text: true },
-        context
+        context,
     }),
     nextpagebutton: ({ context }) => buttonConfig.root({
         props: { severity: null, text: true },
-        context
+        context,
     }),
     lastpagebutton: ({ context }) => buttonConfig.root({
         props: { severity: null, text: true },
-        context
+        context,
     }),
     pagebutton: ({ context }) => buttonConfig.root({
         props: { severity: null, text: !context.active, rounded: true, outlined: true },
-        context
+        context,
     }),
     rowperpagedropdown: dropdownConfig,
-    jumptopageinput: inputNumberConfig,
+    jumptopageinput: {
+        root: inputNumberConfig.root,
+        input: inputNumberConfig.input,
+    },
     jumptopagedropdown: dropdownConfig
 };

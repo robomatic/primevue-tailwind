@@ -1,3 +1,5 @@
+import inputTextConfig from '../inputtext'
+
 export default {
     root: ({ props }) => ({
         class: [
@@ -18,100 +20,27 @@ export default {
             }
         ]
     }),
-    container: ({ props, state }) => ({
-        class: [
-            // Font
-            'font-sans text-base leading-6',
-
-            // Flex
-            'flex items-center flex-wrap',
-            'gap-2',
-
-            // Spacing
-            'relative',
-            'm-0',
-            'px-3 py-2.5',
-
-            // Size
-            'w-full',
-
-            // Shape
-            'list-none',
-            'rounded-sm',
-
-            // Color
-            'text-surface-900 dark:text-surface-0',
-            'bg-surface-0 dark:bg-surface-900',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'shadow-sm',
-
-            // States
-            'ring-1 ring-inset ring-offset-0',
-            'focus:outline-none focus:outline-offset-0',
-            {
-                'ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused && !props.pt?.invalid,
-                'ring-2 ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
-                'ring-2': state.focused,
-                'ring-primary-500 dark:ring-primary-400': state.focused && !props.pt?.invalid,
-                'ring-danger-500 dark:ring-danger-600': props.pt?.invalid
-            },
-
-            // Transition
-            'transition duration-200 ease-in-out',
-
-            // Misc
-            'cursor-text overflow-hidden',
-            'appearance-none'
-        ]
-    }),
-    inputtoken: ({ props }) => ({
-        class: [{ 'py-2.5 px-0': !props.multiple, 'p-0.5': props.multiple }, , 'inline-flex flex-auto']
-    }),
-    input: ({ props }) => ({
-        class: [
-            // Font
-            'font-sans text-base leading-none',
-
-            // Shape
-            'appearance-none rounded-sm',
-            { 'rounded-tr-none rounded-br-none': props.dropdown },
-            { 'outline-none shadow-none rounded-none': props.multiple },
-
-            // Size
-            { 'w-full': props.multiple },
-
-            // Spacing
-            'm-0',
-            { 'py-2.5 px-3': !props.multiple, 'p-0': props.multiple },
-
-            // Colors
-            {
-                'text-surface-700 dark:text-white/80': !props.multiple,
-                'bg-surface-0 dark:bg-surface-900': !props.multiple,
-                'border': !props.multiple,
-                'text-surface-700 dark:text-white/80': props.multiple,
-                'border-0 bg-transparent': props.multiple,
-            },
-
-            // States
-            'focus:outline-none focus:outline-offset-0',
-            {
-                'focus:outline-none focus:outline-offset-0 focus:ring-inset focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400': !props.multiple,
-                'border-danger-500 dark:border-danger-600': props.pt?.invalid,
-                'border-surface-300 dark:border-surface-700': !props.pt?.invalid
-            },
-
-            // Transition
-            'transition-colors duration-200'
-        ]
-    }),
+    container: ({ props, parent }) => {
+        const input = inputTextConfig.root({ props, context: { disabled: props.disabled }, parent })
+        input.class.push('flex items-center flex-wrap gap-2 w-full')
+        return input
+    },
+    inputtoken: {
+        class: ['inline-flex flex-auto']
+    },
+    input: ({ props, parent }) => {
+        if (props.multiple) {
+            return { class: ['p-0 w-full outline-none shadow-none rounded-none ring-none bg-transparent border-0'] }
+        }
+        return inputTextConfig.root({ props, context: { disabled: props.disabled }, parent })
+    },
     token: {
         class: [
             // Flexbox
             'inline-flex items-center',
 
             // Spacing
-            '-my-1',
+            'my-[-2rem]',
             'py-0.5 px-3',
 
             // Shape

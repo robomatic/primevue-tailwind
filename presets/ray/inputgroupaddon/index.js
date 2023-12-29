@@ -1,28 +1,29 @@
 export default {
     root: {
         class: [
+            // Text
+            'sm:text-sm sm:leading-6',
+
             // Flex
             'flex items-center justify-center',
 
             // Shape
             'first:rounded-l-sm',
             'last:rounded-r-sm',
-            'border-y',
+            'border-0',
 
-            'last:border-r',
-            'border-l',
-            'border-r-0',
+            'ring-1 ring-inset',
 
             // Space
-            'p-3',
+            'px-3 py-1.5',
 
             // Size
-            'min-w-[3rem]',
+            'min-w-[2.5rem]',
 
             // Color
             'bg-surface-50 dark:bg-surface-700/20',
             'text-surface-600 dark:text-surface-400',
-            'border-surface-400 dark:border-surface-700'
+            'ring-surface-400 dark:ring-surface-700'
         ]
     }
 };
