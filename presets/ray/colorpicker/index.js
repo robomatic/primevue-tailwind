@@ -18,7 +18,7 @@ export default {
             'p-3',
 
             // Size & Shape
-            'rounded-sm w-8 h-8',
+            'rounded-md w-8 h-8',
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',

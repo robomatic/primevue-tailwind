@@ -7,12 +7,12 @@ export default {
 
             // Shape
             {
-                'rounded-sm before:rounded-sm': !props.rounded,
+                'rounded-md before:rounded-md': !props.rounded,
                 'rounded-full before:rounded-full': props.rounded
             },
             { 'shadow-lg': props.raised },
 
-            { 'before:pointer-events-none before:from-surface-100/20 before:via-black/0 before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-hard-light before:w-full before:h-full before:absolute before:z-10 before:inset-0': !props.link && !props.disabled && !props.text && !props.outlined && !props.plain },
+            { 'before:content-[""] before:pointer-events-none before:from-surface-100/20 before:via-black/0 before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-hard-light before:w-full before:h-full before:absolute before:z-10 before:inset-0': !props.link && !props.disabled && !props.text && !props.outlined && !props.plain },
         ]
     }),
     button: {
@@ -33,7 +33,7 @@ export default {
                 { 'shadow-sm': !parent.props.raised && !parent.props.link && !parent.props.text, 'shadow-lg': parent.props.raised },
                 'rounded-r-none',
                 { 'rounded-l-full': parent.props.rounded },
-                { 'rounded-sm': !parent.props.rounded, 'rounded-full': parent.props.rounded },
+                { 'rounded-md': !parent.props.rounded, 'rounded-full': parent.props.rounded },
 
                 // Link Button
                 { 'text-primary-600 dark:text-primary-400 bg-transparent ring-transparent': parent.props.link },
@@ -217,7 +217,7 @@ export default {
                 // Shape
                 'rounded-l-none',
                 { 'rounded-l-full': parent.props.rounded },
-                { 'rounded-sm': !parent.props.rounded, 'rounded-full': parent.props.rounded },
+                { 'rounded-md': !parent.props.rounded, 'rounded-full': parent.props.rounded },
 
                 // Link Button
                 { 'text-primary-600 dark:text-primary-400 bg-transparent ring-transparent': parent.props.link },

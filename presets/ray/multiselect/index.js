@@ -30,7 +30,7 @@ export default {
     removeTokenIcon: {
         class: [
             // Shape
-            'rounded-sm leading-6',
+            'rounded-md leading-6',
 
             // Spacing
             'ml-2',
@@ -61,8 +61,8 @@ export default {
             'w-8',
 
             // Shape
-            'rounded-tr-sm',
-            'rounded-br-sm'
+            'rounded-tr-md',
+            'rounded-br-md'
         ]
     },
     panel: {
@@ -72,7 +72,7 @@ export default {
 
             // Shape
             'border-0 dark:border',
-            'rounded-sm',
+            'rounded-md',
             'shadow-lg',
 
             // Color
@@ -90,8 +90,8 @@ export default {
 
             //Shape
             'border-b',
-            'rounded-tl-sm',
-            'rounded-tr-sm',
+            'rounded-tl-md',
+            'rounded-tr-md',
 
             // Color
             'text-surface-700 dark:text-white/80',

@@ -124,7 +124,7 @@ export default {
         },
         filteroverlay: {
             class: [
-                'bg-surface-0 text-surface-600 border-0 rounded-sm min-w-[12.5rem]',
+                'bg-surface-0 text-surface-600 border-0 rounded-md min-w-[12.5rem]',
                 'dark:bg-surface-900 dark:border-surface-700 dark:text-white/80' //Dark Mode
             ]
         },

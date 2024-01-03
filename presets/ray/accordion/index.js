@@ -26,7 +26,7 @@ export default {
                 'relative',
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
 
                 // Color
                 'bg-transparent',

@@ -21,7 +21,7 @@ export default {
 
             // Transitions and Shape
             'transition-shadow',
-            'rounded-sm',
+            'rounded-md',
 
             // Spacing
             { 'pr-4 min-[576px]:pr-32 md:pr-40': props.model.length !== context.index + 1 },

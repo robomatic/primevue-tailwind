@@ -2,7 +2,7 @@ export default {
     root: ({ props }) => ({
         class: [
             //Size and Shape
-            'w-96 rounded-sm',
+            'w-96 rounded-md',
 
             // Positioning
             { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }
@@ -10,7 +10,7 @@ export default {
     }),
     container: ({ props }) => ({
         class: [
-            'my-4 rounded-sm w-full',
+            'my-4 rounded-md w-full',
             'border-solid border-0 border-l-[6px]',
             'backdrop-blur-[10px] shadow-md',
 

@@ -8,8 +8,8 @@ export default {
             'flex items-center justify-center',
 
             // Shape
-            'first:rounded-l-sm',
-            'last:rounded-r-sm',
+            'first:rounded-l-md',
+            'last:rounded-r-md',
             'border-0',
 
             'ring-1 ring-inset',

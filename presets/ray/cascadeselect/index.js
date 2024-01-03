@@ -7,7 +7,7 @@ export default {
 
             // Shape
             'w-full md:w-fit',
-            'rounded-sm',
+            'rounded-md',
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
@@ -95,7 +95,7 @@ export default {
 
             // Shape
             'border-0 dark:border',
-            'rounded-sm',
+            'rounded-md',
             'shadow-md',
 
             // Color

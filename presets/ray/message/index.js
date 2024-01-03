@@ -3,7 +3,7 @@ export default {
         class: [
             // Spacing and Shape
             'my-2 mx-0',
-            'rounded-sm',
+            'rounded-md',
             'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
 
             // Colors

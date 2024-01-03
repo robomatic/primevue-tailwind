@@ -9,7 +9,7 @@ export default {
             'p-3',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Colors
             'text-surface-600 dark:text-surface-200',

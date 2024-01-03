@@ -28,7 +28,7 @@ export default {
             'h-6',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
             'border',
 
             // Colors

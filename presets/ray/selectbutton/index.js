@@ -2,7 +2,7 @@ export default {
     root: ({ props }) => ({
         class: [
             'shadow-sm',
-            'rounded-sm',
+            'rounded-md',
             { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled },
             {
                 'ring-1 ring-danger-500 dark:ring-danger-600': props.pt?.invalid
@@ -23,8 +23,8 @@ export default {
             'px-3 py-2.5',
 
             // Shape
-            'first:rounded-l-sm first:rounded-tr-none first:rounded-br-none',
-            'last:rounded-tl-none last:rounded-bl-none last:rounded-r-sm',
+            'first:rounded-l-md first:rounded-tr-none first:rounded-br-none',
+            'last:rounded-tl-none last:rounded-bl-none last:rounded-r-md',
 
             // Color
             {

@@ -9,7 +9,7 @@ export default {
 
             // Shape
             'w-full md:w-fit',
-            'rounded-sm',
+            'rounded-md',
             'shadow-sm',
         ]
     }),
@@ -39,8 +39,8 @@ export default {
             'w-10',
 
             // Shape
-            'rounded-tr-sm',
-            'rounded-br-sm',
+            'rounded-tr-md',
+            'rounded-br-md',
 
             'cursor-pointer',
         ]
@@ -52,7 +52,7 @@ export default {
 
             // Shape
             'border-0',
-            'rounded-sm',
+            'rounded-md',
             'shadow-lg',
 
             // Color
@@ -177,7 +177,7 @@ export default {
 
             // Shape
             'border-0',
-            'rounded-sm',
+            'rounded-md',
             'appearance-none',
 
             // States

@@ -10,8 +10,8 @@ export default {
             'px-3 py-1.5',
 
             // Shape
-            { 'rounded-sm': parent?.instance?.$name !== 'InputGroup' },
-            { 'first:rounded-l-sm rounded-none last:rounded-r-sm': parent?.instance?.$name == 'InputGroup' },
+            { 'rounded-md': parent?.instance?.$name !== 'InputGroup' },
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent?.instance?.$name == 'InputGroup' },
             { 'first:ml-0 -ml-px': parent?.instance?.$name == 'InputGroup' && !props?.showButtons },
 
             // Colors

@@ -7,7 +7,7 @@ export default {
             'p-3',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Color
             'bg-surface-0 dark:bg-surface-800',
@@ -28,7 +28,7 @@ export default {
         ]
     },
     node: {
-        class: ['p-0', 'rounded-sm', 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-0 focus:ring-primary-500/50 dark:focus:ring-primary-500/50']
+        class: ['p-0', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-0 focus:ring-primary-500/50 dark:focus:ring-primary-500/50']
     },
     content: ({ context, props }) => ({
         class: [
@@ -36,7 +36,7 @@ export default {
             'flex items-center gap-2.5',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Spacing
             'px-2 py-2.5',
@@ -130,7 +130,7 @@ export default {
             'shadow-sm',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
             'appearance-none',
 
             // Interactions

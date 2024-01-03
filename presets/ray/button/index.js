@@ -16,10 +16,10 @@ export default {
             // Shapes
             { 'shadow-sm': !props.raised && !props.link && !props.text, 'shadow-lg': props.raised },
             { 
-                'rounded-sm': !props.rounded && parent?.instance?.$name !== 'InputGroup',
+                'rounded-md': !props.rounded && parent?.instance?.$name !== 'InputGroup',
                 'rounded-full': props.rounded
             },
-            { 'rounded-none first:rounded-l-sm last:rounded-r-sm self-center': parent?.instance?.$name == 'InputGroup' },
+            { 'rounded-none first:rounded-l-md last:rounded-r-md self-center': parent?.instance?.$name == 'InputGroup' },
 
             // Link Button
             { 'text-primary-600 dark:text-primary-400 bg-transparent ring-transparent': props.link && !context.disabled },
@@ -178,7 +178,7 @@ export default {
 
             // Misc
             'cursor-pointer overflow-hidden select-none',
-            { 'before:from-surface-100/20 before:via-black/0 before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-hard-light before:w-full before:h-full before:absolute before:inset-0': !props.link && !context.disabled && !props.text && !props.outlined && !props.plain },
+            { 'before:content-[""] before:from-surface-100/20 before:via-black/0 before:to-surface-900/20 before:bg-gradient-to-br before:mix-blend-hard-light before:w-full before:h-full before:absolute before:inset-0': !props.link && !context.disabled && !props.text && !props.outlined && !props.plain },
         ]
     }),
     label: ({ props }) => ({

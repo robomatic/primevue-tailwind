@@ -53,7 +53,7 @@ export default {
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
                 { 'rounded-tl-none rounded-br-none rounded-bl-none border-b-0': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-bl-none rounded-tl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-bl-none rounded-br-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
@@ -98,7 +98,7 @@ export default {
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
                 { 'rounded-tr-none rounded-tl-none rounded-bl-none border-t-none': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'rounded-tr-none rounded-br-none ': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-tr-none rounded-tl-none ': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },

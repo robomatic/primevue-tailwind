@@ -8,7 +8,7 @@ export default {
             'max-w-full',
             'relative',
             'shadow-sm',
-            'rounded-sm',
+            'rounded-md',
             // Misc
             {
                 'opacity-40 select-none pointer-events-none cursor-default': props.disabled,
@@ -28,7 +28,7 @@ export default {
                 'items-center inline-flex text-center align-bottom',
 
                 // Shape
-                'rounded-r-sm',
+                'rounded-r-md',
 
                 // Size
                 'px-2.5 py-1.5 leading-none',
@@ -88,7 +88,7 @@ export default {
             { 'py-2 pl-2 pb-4': !(props.numberOfMonths > 1), 'py-2 pb-4': props.numberOfMonths > 1 },
 
             // Shape
-            'rounded-t-sm',
+            'rounded-t-md',
 
             // Colors
             'text-surface-700 dark:text-white/80',
@@ -308,7 +308,7 @@ export default {
             'text-md leading-none',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Colors
             {
@@ -342,7 +342,7 @@ export default {
             'text-md leading-none',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Colors
             {
@@ -510,7 +510,7 @@ export default {
                 'px-2.5 py-1.5 text-sm leading-none',
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
 
                 // Colors
                 'bg-transparent border-transparent',
@@ -539,7 +539,7 @@ export default {
                 'px-2.5 py-1.5 text-sm leading-none',
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
 
                 // Colors
                 'bg-transparent border-transparent',

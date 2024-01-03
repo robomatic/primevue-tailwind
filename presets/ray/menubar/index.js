@@ -46,7 +46,7 @@ export default {
             // Shape
             'shadow-md sm:shadow-none',
             'border-0',
-            'sm:rounded-none rounded-sm',
+            'sm:rounded-none rounded-md',
 
             // Color
             'bg-surface-0 dark:bg-surface-900 sm:bg-transparent dark:sm:bg-transparent',
@@ -64,7 +64,7 @@ export default {
     content: ({ props, context }) => ({
         class: [
             // Shape
-            { 'rounded-sm': props.root },
+            { 'rounded-md': props.root },
 
             //  Colors
             {

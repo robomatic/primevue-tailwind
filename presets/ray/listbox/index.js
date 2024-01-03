@@ -5,7 +5,7 @@ export default {
         class: [
             // Sizing and Shape
             'min-w-[12rem]',
-            'rounded-sm',
+            'rounded-md',
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
@@ -86,8 +86,8 @@ export default {
 
             //Shape
             'border-b',
-            'rounded-tl-sm',
-            'rounded-tr-sm',
+            'rounded-tl-md',
+            'rounded-tr-md',
 
             // Color
             'text-surface-700 dark:text-white/80',

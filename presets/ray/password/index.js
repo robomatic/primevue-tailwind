@@ -14,7 +14,7 @@ export default {
 
             // Shape
             'border-0 dark:border',
-            'shadow-md rounded-sm',
+            'shadow-md rounded-md',
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',

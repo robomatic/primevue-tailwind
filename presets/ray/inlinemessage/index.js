@@ -2,7 +2,7 @@ export default {
     root: ({ props }) => ({
         class: [
             'inline-flex items-center justify-center align-top gap-2',
-            'py-2 px-3 m-0 rounded-sm',
+            'py-2 px-3 m-0 rounded-md',
             'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
             {
                 'text-info-600 dark:text-info-500': props.severity == 'info',

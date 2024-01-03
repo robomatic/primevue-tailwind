@@ -57,7 +57,7 @@ export default {
     removeTokenIcon: {
         class: [
             // Shape
-            'rounded-sm leading-6',
+            'rounded-md leading-6',
 
             // Spacing
             'ml-2',
@@ -109,7 +109,7 @@ export default {
 
             // Shape
             'border-0',
-            'rounded-sm',
+            'rounded-md',
             'shadow-md',
             'max-h-[15rem]',
             'overflow-auto',

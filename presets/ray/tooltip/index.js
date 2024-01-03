@@ -22,7 +22,7 @@ export default {
             'p-2',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Color
             'text-surface-900 dark:text-surface-0/80',

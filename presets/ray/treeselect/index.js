@@ -8,7 +8,7 @@ export default {
             'relative',
 
             // Shape
-            'rounded-sm',
+            'rounded-md',
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
@@ -62,8 +62,8 @@ export default {
             'w-12',
 
             // Shape
-            'rounded-tr-sm',
-            'rounded-br-sm'
+            'rounded-tr-md',
+            'rounded-br-md'
         ]
     },
     panel: {
@@ -73,7 +73,7 @@ export default {
 
             // Shape
             'border-0 dark:border',
-            'rounded-sm',
+            'rounded-md',
             'shadow-lg',
 
             // Color
@@ -111,7 +111,7 @@ export default {
             ]
         },
         node: {
-            class: ['p-0', 'rounded-sm', 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-0 focus:ring-primary-500/50 dark:focus:ring-primary-500/50']
+            class: ['p-0', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-0 focus:ring-primary-500/50 dark:focus:ring-primary-500/50']
         },
         content: ({ context, props }) => ({
             class: [
@@ -119,7 +119,7 @@ export default {
                 'flex items-center gap-2.5',
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
 
                 // Spacing
                 'px-2 py-2.5',
@@ -205,7 +205,7 @@ export default {
                 'w-full',
 
                 // Shape
-                'rounded-sm',
+                'rounded-md',
 
                 // Colors
                 'text-surface-600 dark:text-surface-200',

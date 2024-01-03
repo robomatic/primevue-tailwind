@@ -12,7 +12,7 @@ export default {
 
             //Shape
             {
-                'rounded-sm': !props.rounded,
+                'rounded-md': !props.rounded,
                 'rounded-full': props.rounded
             },
 

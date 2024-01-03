@@ -8,7 +8,7 @@ export default {
             'px-4 py-3 leading-none',
 
             // Shapes
-            'rounded-sm border',
+            'rounded-md border',
 
             // Colors
             {

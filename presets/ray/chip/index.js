@@ -27,7 +27,7 @@ export default {
     removeIcon: {
         class: [
             // Shape
-            'rounded-sm leading-6',
+            'rounded-md leading-6',
 
             // Spacing
             'ml-2',
