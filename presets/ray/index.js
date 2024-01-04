@@ -4,6 +4,7 @@ import avatar from './avatar';
 import avatargroup from './avatargroup';
 import badge from './badge';
 import badgedirective from './badgedirective';
+import breadcrumb from './breadcrumb';
 import button from './button';
 import calendar from './calendar';
 import card from './card';
@@ -12,8 +13,11 @@ import checkbox from './checkbox';
 import chip from './chip';
 import chips from './chips';
 import colorpicker from './colorpicker';
+import confirmpopup from './confirmpopup';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
+import dataview from './dataview';
+import dataviewlayoutoptions from './dataviewlayoutoptions';
 import dialog from './dialog';
 import divider from './divider';
 import dropdown from './dropdown';
@@ -32,14 +36,18 @@ import menu from './menu';
 import menubar from './menubar';
 import message from './message';
 import multiselect from './multiselect';
+import organizationchart from './organizationchart';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
+import panelmenu from './panelmenu';
 import password from './password';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
 import rating from './rating';
 import ripple from './ripple';
+import scrollpanel from './scrollpanel';
+import scrolltop from './scrolltop';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import skeleton from './skeleton';
@@ -52,6 +60,7 @@ import textarea from './textarea';
 import tieredmenu from './tieredmenu';
 import toast from './toast';
 import togglebutton from './togglebutton';
+import toolbar from './toolbar';
 import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
@@ -100,6 +109,9 @@ export default {
     paginator,
     datatable,
     tree,
+    dataview,
+    dataviewlayoutoptions,
+    organizationchart,
 
     //panels
     accordion,
@@ -108,6 +120,8 @@ export default {
     card,
     tabview,
     divider,
+    toolbar,
+    scrollpanel,
 
     //menu
     contextmenu,
@@ -115,11 +129,14 @@ export default {
     menubar,
     steps,
     tieredmenu,
+    breadcrumb,
+    panelmenu,
 
     //overlays
     dialog,
     overlaypanel,
     sidebar,
+    confirmpopup,
 
     //messages
     message,
@@ -133,5 +150,6 @@ export default {
     tag,
     chip,
     progressbar,
-    skeleton
+    skeleton,
+    scrolltop
 };

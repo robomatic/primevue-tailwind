@@ -2,7 +2,7 @@ export default {
     root: ({ state }) => ({
         class: [
             // Shape
-            'rounded-lg',
+            'rounded-md',
             'shadow-xl',
             'border-0',
 
@@ -41,8 +41,7 @@ export default {
             'p-6 pt-4',
 
             // Shape
-            'rounded-tl-lg',
-            'rounded-tr-lg',
+            'rounded-t-md',
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',
@@ -153,8 +152,7 @@ export default {
             // Shape
             {
                 grow: state.maximized,
-                'rounded-bl-lg': !instance.$slots.footer,
-                'rounded-br-lg': !instance.$slots.footer
+                'rounded-b-lg': !instance.$slots.footer,
             },
 
             // Colors
