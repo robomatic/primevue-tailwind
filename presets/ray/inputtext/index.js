@@ -8,7 +8,6 @@ export default {
 
             // Spacing
             'px-3 py-1.5',
-
             // Shape
             { 'rounded-md': parent?.instance?.$name !== 'InputGroup' },
             { 'first:rounded-l-md rounded-none last:rounded-r-md': parent?.instance?.$name == 'InputGroup' },

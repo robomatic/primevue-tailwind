@@ -1,5 +1,3 @@
-import inputTextConfig from '../inputtext'
-
 export default {
     root: ({ props, parent }) => ({
         class: [
@@ -13,14 +11,47 @@ export default {
         ]
     }),
     input: {
-        root: ({ props, parent }) => {
-            const input = inputTextConfig.root({ props, context: { disabled: props?.disabled }, parent })
-            input.class.push({ 
-                'text-center': parent?.props?.showButtons && (parent?.props?.buttonLayout == 'vertical' || parent?.props?.buttonLayout == 'horizontal'),
-                'order-2': parent?.props?.buttonLayout == 'horizontal' || parent?.props?.buttonLayout == 'vertical'
-            })
-            return input
-        }
+        root: ({ props, context, parent }) => ({
+            class: [
+                'relative',
+
+                // Text
+                'sm:text-sm sm:leading-6',
+                { 
+                    'text-center': parent?.props?.showButtons && (parent?.props?.buttonLayout == 'vertical' || parent?.props?.buttonLayout == 'horizontal'),
+                    'order-2': parent?.props?.buttonLayout == 'horizontal' || parent?.props?.buttonLayout == 'vertical'
+                },
+
+                // Spacing
+                'px-3 py-1.5',
+
+                // Shape
+                'appearance-none outline-none',
+                { 'rounded-md': parent?.instance?.$parentInstance?.$name !== 'InputGroup' },
+                { '-mx-px': parent?.instance?.$parentInstance?.$name == 'InputGroup' && !props?.showButtons },
+
+                // Colors
+                'text-surface-900 dark:text-surface-0',
+                'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+                'bg-surface-0 dark:bg-surface-900',
+                'ring-1 ring-inset',
+                'border-0',
+                'shadow-sm',
+
+                // Interactions
+                {
+                    'hover:ring-primary-500 dark:hover:ring-primary-400': !context?.disabled,
+                    'focus-within:ring-none opacity-60 select-none pointer-events-none cursor-default': context?.disabled
+                },
+
+                // States
+                'focus-within:ring-2 focus-within:ring-inset',
+                {
+                    'ring-surface-400 dark:ring-surface-700 focus-within:ring-primary-500 dark:focus-within:ring-primary-600': !props?.pt?.invalid,
+                    'ring-danger-500 dark:ring-danger-600 focus-within:ring-danger-500 focus-within:dark:ring-danger-600': props?.pt?.invalid
+                },
+            ]
+        })
     },
     buttongroup: {
         class: ['flex', 'flex-col']

@@ -71,15 +71,15 @@ export default {
                 'text-surface-800 dark:text-white/70': !context.focused && !context.active && context.level === 0 && props?.mobileActive,
                 'text-white/80 dark:text-white/70': !context.focused && !context.active && context.level === 0 && !props?.mobileActive,
                 'text-surface-600 dark:text-surface-400': !context.focused && !context.active && context.level > 0,
-                'text-white dark:text-white/70 bg-primary-500 dark:bg-primary-800': context.focused && !context.active,
-                'text-white dark:text-white/80 bg-primary-500 dark:bg-primary-800': context.focused && context.active,
-                'text-white/80 dark:text-white/70 bg-primary-500 dark:bg-primary-800': !context.focused && context.active
+                'text-white dark:text-white/70 bg-primary-500 dark:bg-primary-500': context.focused && !context.active,
+                'text-white dark:text-white/80 bg-primary-500 dark:bg-primary-500': context.focused && context.active,
+                'text-white/80 dark:text-white/70 bg-primary-500 dark:bg-primary-500': !context.focused && context.active
             },
 
             // Hover States
             {
-                'hover:bg-primary-500 dark:hover:bg-primary-800 hover:text-white': !context.active,
-                'hover:bg-primary-500 dark:hover:bg-primary-800': context.active
+                'hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white': !context.active,
+                'hover:bg-primary-500 dark:hover:bg-primary-500': context.active
             },
 
             // Transitions
@@ -92,7 +92,7 @@ export default {
             'relative',
 
             // Font
-            'sm:text-sm font-medium',
+            'sm:text-sm',
 
             // Flexbox
             'flex',
@@ -134,24 +134,28 @@ export default {
 
             // Spacing
             'py-1',
-            'm-0',
             'list-none',
 
             // Shape
-            'shadow-none sm:shadow-md',
+            'shadow-none sm:shadow-lg',
             'border-0',
+            'rounded-md',
 
             // Position
             'static sm:absolute',
             'z-10',
-            { 'sm:absolute sm:left-full top-0 sm:-top-1': props.level > 1 },
+            {
+                'sm:absolute sm:left-full top-0 sm:-top-1 mt-0': props.level > 1,
+                'mt-2': props.level === 1
+            },
 
             // Color
-            'bg-surface-0 dark:bg-surface-900'
+            'bg-surface-0 dark:bg-surface-800',
+            'ring-1 ring-surface-200 dark:ring-surface-700/50',
         ]
     }),
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
+        class: 'border-t border-surface-200 dark:border-surface-700'
     },
     button: {
         class: [

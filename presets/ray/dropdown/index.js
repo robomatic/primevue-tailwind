@@ -15,10 +15,13 @@ export default {
     }),
     input: ({ props }) => {
         const input = inputTextConfig.root({})
+
         input.class.push('block flex-auto w-[1%] rounded-tr-none rounded-br-none')
+
         if (props.showClear) {
             input.class.push('pr-7')
         }
+
         return input
     },
     trigger: {
@@ -37,6 +40,7 @@ export default {
 
             // Size
             'w-10',
+            '-ml-px',
 
             // Shape
             'rounded-tr-md',
@@ -49,27 +53,26 @@ export default {
         class: [
             // Position
             'absolute top-0 left-0',
-
-            // Shape
-            'border-0',
-            'rounded-md',
-            'shadow-lg',
-
-            // Color
-            'bg-surface-0 dark:bg-surface-800',
-            'text-surface-800 dark:text-white/80',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700'
+            'py-2',
         ]
     },
-    wrapper: {
-        class: [
-            // Sizing
-            'max-h-[15rem]',
-
-            // Misc
-            'overflow-auto'
-        ]
-    },
+    wrapper: ({ props }) => ({
+            class: [
+                // Sizing
+                'max-h-[15rem]',
+                // Misc
+                'overflow-auto',
+                // Shape
+                'border-0',
+                'shadow-lg',
+                props.filter ? 'rounded-b-md' : 'rounded-md',
+    
+                // Color
+                'bg-surface-0 dark:bg-surface-800',
+                'text-surface-800 dark:text-white/80',
+                'ring-1 ring-inset ring-surface-300 dark:ring-surface-700'
+            ]
+        }),
     list: {
         class: 'py-1 list-none m-0'
     },

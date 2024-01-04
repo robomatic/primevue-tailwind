@@ -4,12 +4,14 @@ export default {
             // Sizing and Shape
             'min-w-[12rem]',
             'rounded-md',
+            'shadow-lg',
             // Spacing
             'py-1.5',
+            'mt-2',
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
-            'ring-1 ring-surface-200 dark:ring-surface-700'
+            'ring-1 ring-surface-200 dark:ring-surface-700/50'
         ]
     },
     menu: {
@@ -18,7 +20,7 @@ export default {
             'list-none',
             'm-0',
             'p-0',
-            'outline-none'
+            'outline-none',
         ]
     },
     menuitem: {
@@ -30,12 +32,12 @@ export default {
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-md',
+            'rounded-none',
 
             // Colors
             {
                 'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+                'text-primary-600 dark:text-primary-400': context.focused
             },
 
             // Transitions
@@ -43,16 +45,13 @@ export default {
             'duration-200',
 
             // States
-            'hover:text-primary-600 dark:hover:text-primary-400 ',
-            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
+            'hover:text-white',
+            'hover:bg-primary-500'
         ]
     }),
     action: {
         class: [
             'relative',
-
-            // Font
-            'font-semibold',
 
             // Flexbox
             'flex',
@@ -96,7 +95,7 @@ export default {
             'rounded-tr-none',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-600 dark:text-surface-0/60'
         ]
     },
