@@ -18,7 +18,7 @@ module.exports = {
                     700: 'rgb(var(--primary-700))',
                     800: 'rgb(var(--primary-800))',
                     900: 'rgb(var(--primary-900))',
-                    950: 'rgb(var(--primary-950))',
+                    950: 'rgb(var(--primary-950))'
                 },
                 secondary: {
                     DEFAULT: 'rgb(var(--secondary-500))',
@@ -33,7 +33,7 @@ module.exports = {
                     700: 'rgb(var(--secondary-700))',
                     800: 'rgb(var(--secondary-800))',
                     900: 'rgb(var(--secondary-900))',
-                    950: 'rgb(var(--secondary-950))',
+                    950: 'rgb(var(--secondary-950))'
                 },
                 surface: {
                     DEFAULT: 'rgb(var(--surface-500))',
@@ -48,7 +48,7 @@ module.exports = {
                     700: 'rgb(var(--surface-700))',
                     800: 'rgb(var(--surface-800))',
                     900: 'rgb(var(--surface-900))',
-                    950: 'rgb(var(--surface-950))',
+                    950: 'rgb(var(--surface-950))'
                 },
                 success: {
                     DEFAULT: 'rgb(var(--success-500))',
@@ -63,7 +63,7 @@ module.exports = {
                     700: 'rgb(var(--success-700))',
                     800: 'rgb(var(--success-800))',
                     900: 'rgb(var(--success-900))',
-                    950: 'rgb(var(--success-950))',
+                    950: 'rgb(var(--success-950))'
                 },
                 info: {
                     DEFAULT: 'rgb(var(--info-500))',
@@ -78,7 +78,7 @@ module.exports = {
                     700: 'rgb(var(--info-700))',
                     800: 'rgb(var(--info-800))',
                     900: 'rgb(var(--info-900))',
-                    950: 'rgb(var(--info-950))',
+                    950: 'rgb(var(--info-950))'
                 },
                 warning: {
                     DEFAULT: 'rgb(var(--warning-500))',
@@ -93,7 +93,7 @@ module.exports = {
                     700: 'rgb(var(--warning-700))',
                     800: 'rgb(var(--warning-800))',
                     900: 'rgb(var(--warning-900))',
-                    950: 'rgb(var(--warning-950))',
+                    950: 'rgb(var(--warning-950))'
                 },
                 help: {
                     DEFAULT: 'rgb(var(--help-500))',
@@ -108,7 +108,7 @@ module.exports = {
                     700: 'rgb(var(--help-700))',
                     800: 'rgb(var(--help-800))',
                     900: 'rgb(var(--help-900))',
-                    950: 'rgb(var(--help-950))',
+                    950: 'rgb(var(--help-950))'
                 },
                 danger: {
                     DEFAULT: 'rgb(var(--danger-500))',
@@ -123,7 +123,16 @@ module.exports = {
                     700: 'rgb(var(--danger-700))',
                     800: 'rgb(var(--danger-800))',
                     900: 'rgb(var(--danger-900))',
-                    950: 'rgb(var(--danger-950))',
+                    950: 'rgb(var(--danger-950))'
+                }
+            },
+            animation: {
+                'fade-in': 'fadein 250ms linear'
+            },
+            keyframes: {
+                fadein: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 }
                 },
             }
         }

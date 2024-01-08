@@ -11,7 +11,7 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
-            'ring-1 ring-surface-200 dark:ring-surface-700/50'
+            'border border-surface-200 dark:border-surface-700/50'
         ]
     },
     menu: {
