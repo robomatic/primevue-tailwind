@@ -21,8 +21,8 @@ dependencies:
     specifier: ^6.0.1
     version: 6.0.1
   primevue:
-    specifier: ^3.45.0
-    version: 3.45.0
+    specifier: ^3.46.0
+    version: 3.46.0
 
 devDependencies:
   '@babel/eslint-parser':
@@ -5026,7 +5026,7 @@ packages:
     resolution: {integrity: sha512-OfXDe5V0WovXt9b2GOjYV1kyVXmcFfj+6DqVs1pbeP4EyF2H0SbIMoUTT8Ax+sXT/tQ+mXr3qTFD9Y6IL+Y9og==}
     dependencies:
       '@nuxt/kit': 3.8.2
-      primevue: 3.45.0
+      primevue: 3.46.0
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -5782,8 +5782,8 @@ packages:
     resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
     dev: false
 
-  /primevue@3.45.0:
-    resolution: {integrity: sha512-qtA2YDi6SSBkGRb33lUXL2WnzMd7VZd4IC/YLXiUZLnxCGxqtB4iYj+jGqINNDcIFVqIYYMrc1UhiX+C68GQEQ==}
+  /primevue@3.46.0:
+    resolution: {integrity: sha512-WGprXj9HA+j6gLLDaSxcRRSChIF99ld5fg1D3hYFA7hNiEuON1aqe83gf52vUSw8yjVMtFQ3CMPQSTYhooNwIg==}
     peerDependencies:
       vue: ^3.0.0
     dev: false
