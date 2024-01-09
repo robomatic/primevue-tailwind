@@ -23,7 +23,7 @@ export default {
             // Color
             'bg-surface-50 dark:bg-surface-700/20',
             'text-surface-600 dark:text-surface-400',
-            'ring-surface-400 dark:ring-surface-700'
-        ]
-    }
+            'ring-surface-400 dark:ring-surface-700',
+        ],
+    },
 };

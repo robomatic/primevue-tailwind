@@ -18,27 +18,33 @@ export default {
                 'p-0': context.nogutter || context.dot,
                 'p-1': !context.nogutter && !context.dot,
                 'min-w-[0.5rem] h-2': context.dot,
-                'min-w-[1rem] h-4': !context.dot
+                'min-w-[1rem] h-4': !context.dot,
             },
 
             // Shape
             {
                 'rounded-full': context.nogutter || context.dot,
-                'rounded-[10px]': !context.nogutter && !context.dot
+                'rounded-[10px]': !context.nogutter && !context.dot,
             },
 
             // Color
             'text-white dark:text-surface-900',
             'ring-1 ring-white dark:ring-surface-900',
             {
-                'bg-primary-500 dark:bg-primary-400': !context.info && !context.success && !context.warning && !context.danger && !context.help && !context.secondary,
+                'bg-primary-500 dark:bg-primary-400':
+                    !context.info &&
+                    !context.success &&
+                    !context.warning &&
+                    !context.danger &&
+                    !context.help &&
+                    !context.secondary,
                 'bg-surface-500 dark:bg-surface-400': context.secondary,
                 'bg-success-500 dark:bg-success-400': context.success,
                 'bg-info-500 dark:bg-info-400': context.info,
                 'bg-warning-500 dark:bg-warning-400': context.warning,
                 'bg-help-500 dark:bg-help-400': context.help,
-                'bg-danger-500 dark:bg-danger-400': context.danger
-            }
-        ]
-    })
+                'bg-danger-500 dark:bg-danger-400': context.danger,
+            },
+        ],
+    }),
 };

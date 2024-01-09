@@ -32,16 +32,19 @@ import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import knob from './knob';
 import listbox from './listbox';
+import megamenu from './megamenu';
 import menu from './menu';
 import menubar from './menubar';
 import message from './message';
 import multiselect from './multiselect';
+import orderlist from './orderlist';
 import organizationchart from './organizationchart';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
 import panelmenu from './panelmenu';
 import password from './password';
+import picklist from './picklist';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
 import rating from './rating';
@@ -71,10 +74,10 @@ export default {
     directives: {
         badge: badgedirective,
         ripple,
-        tooltip
+        tooltip,
     },
 
-    //forms
+    // forms
     autocomplete,
     dropdown,
     inputnumber,
@@ -101,19 +104,21 @@ export default {
     textarea,
     password,
 
-    //buttons
+    // buttons
     button,
     splitbutton,
 
-    //data
+    // data
     paginator,
     datatable,
     tree,
     dataview,
     dataviewlayoutoptions,
     organizationchart,
+    orderlist,
+    picklist,
 
-    //panels
+    // panels
     accordion,
     panel,
     fieldset,
@@ -123,7 +128,7 @@ export default {
     toolbar,
     scrollpanel,
 
-    //menu
+    // menu
     contextmenu,
     menu,
     menubar,
@@ -131,19 +136,20 @@ export default {
     tieredmenu,
     breadcrumb,
     panelmenu,
+    megamenu,
 
-    //overlays
+    // overlays
     dialog,
     overlaypanel,
     sidebar,
     confirmpopup,
 
-    //messages
+    // messages
     message,
     inlinemessage,
     toast,
 
-    //misc
+    // misc
     badge,
     avatar,
     avatargroup,
@@ -151,5 +157,5 @@ export default {
     chip,
     progressbar,
     skeleton,
-    scrolltop
+    scrolltop,
 };

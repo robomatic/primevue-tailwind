@@ -1,3 +1,3 @@
-import inputTextConfig from '../inputtext'
+import inputTextConfig from '../inputtext';
 
-export default inputTextConfig
+export default inputTextConfig;

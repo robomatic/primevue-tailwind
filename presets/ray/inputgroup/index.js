@@ -1,5 +1,5 @@
 export default {
     root: {
-        class: ['flex', 'w-full' ]
-    }
+        class: ['flex', 'w-full'],
+    },
 };

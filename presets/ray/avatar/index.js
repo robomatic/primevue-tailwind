@@ -3,9 +3,9 @@ export default {
         class: [
             // Font
             {
-                'text-sm': props.size == null || props.size == 'normal',
-                'text-lg': props.size == 'large',
-                'text-xl': props.size == 'xlarge'
+                'text-sm': props.size === null || props.size === 'normal',
+                'text-lg': props.size === 'large',
+                'text-xl': props.size === 'xlarge',
             },
 
             // Alignments
@@ -15,25 +15,25 @@ export default {
 
             // Sizes
             {
-                'h-8 w-8': props.size == null || props.size == 'normal',
-                'w-12 h-12': props.size == 'large',
-                'w-16 h-16': props.size == 'xlarge'
+                'h-8 w-8': props.size === null || props.size === 'normal',
+                'w-12 h-12': props.size === 'large',
+                'w-16 h-16': props.size === 'xlarge',
             },
-            { '-ml-4': parent.instance.$style?.name == 'avatargroup' },
+            { '-ml-4': parent.instance.$style?.name === 'avatargroup' },
 
             // Shapes
             {
-                'rounded': props.shape == 'square',
-                'rounded-full': props.shape == 'circle'
+                rounded: props.shape === 'square',
+                'rounded-full': props.shape === 'circle',
             },
-            { 'border-2': parent.instance.$style?.name == 'avatargroup' },
+            { 'border-2': parent.instance.$style?.name === 'avatargroup' },
 
             // Colors
             'bg-surface-100 dark:bg-surface-700',
-            { 'border-white dark:border-surface-800': parent.instance.$style?.name == 'avatargroup' }
-        ]
+            { 'border-white dark:border-surface-800': parent.instance.$style?.name === 'avatargroup' },
+        ],
     }),
     image: {
-        class: 'h-full w-full'
-    }
+        class: 'h-full w-full',
+    },
 };

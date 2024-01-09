@@ -11,8 +11,8 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
-            'border border-surface-200 dark:border-surface-700/50'
-        ]
+            'border border-surface-200 dark:border-surface-700/50',
+        ],
     },
     menu: {
         class: [
@@ -21,23 +21,23 @@ export default {
             'm-0',
             'p-0',
             'outline-none',
-        ]
+        ],
     },
     menuitem: {
         class: [
             // Space
-            'first:mt-0 mt-1'
-        ]
+            'first:mt-0 mt-1',
+        ],
     },
     content: ({ context }) => ({
         class: [
-            //Shape
+            // Shape
             'rounded-none',
 
             // Colors
             {
                 'text-surface-700 dark:text-surface-0': !context.focused,
-                'text-primary-600 dark:text-primary-400': context.focused
+                'text-primary-600 dark:text-primary-400': context.focused,
             },
 
             // Transitions
@@ -46,8 +46,8 @@ export default {
 
             // States
             'hover:text-white',
-            'hover:bg-primary-500'
-        ]
+            'hover:bg-primary-500',
+        ],
     }),
     action: {
         class: [
@@ -65,19 +65,19 @@ export default {
             'no-underline',
             'overflow-hidden',
             'cursor-pointer',
-            'select-none'
-        ]
+            'select-none',
+        ],
     },
     icon: {
         class: [
             // Spacing
             'mr-2',
             'leading-6',
-            'text-sm'
-        ]
+            'text-sm',
+        ],
     },
     label: {
-        class: ['leading-6', 'text-sm']
+        class: ['leading-6', 'text-sm'],
     },
     submenuheader: {
         class: [
@@ -96,13 +96,13 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
-            'text-surface-600 dark:text-surface-0/60'
-        ]
+            'text-surface-600 dark:text-surface-0/60',
+        ],
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
         leaveActiveClass: 'transition-opacity duration-100 ease-linear',
-        leaveToClass: 'opacity-0'
-    }
+        leaveToClass: 'opacity-0',
+    },
 };

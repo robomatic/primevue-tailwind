@@ -10,12 +10,12 @@ export default {
             'bg-surface-0 dark:bg-surface-800',
 
             {
-                'text-info-600 dark:text-info-500': props.severity == 'info',
-                'text-success-600 dark:text-success-500': props.severity == 'success',
-                'text-warning-600 dark:text-warning-500': props.severity == 'warn',
-                'text-danger-600 dark:text-danger-500': props.severity == 'error'
-            }
-        ]
+                'text-info-600 dark:text-info-500': props.severity === 'info',
+                'text-success-600 dark:text-success-500': props.severity === 'success',
+                'text-warning-600 dark:text-warning-500': props.severity === 'warn',
+                'text-danger-600 dark:text-danger-500': props.severity === 'error',
+            },
+        ],
     }),
     wrapper: {
         class: [
@@ -23,24 +23,24 @@ export default {
             'flex items-center',
 
             // Spacing
-            'p-4'
-        ]
+            'p-4',
+        ],
     },
     icon: {
         class: [
             // Sizing and Spacing
             'w-5 h-5',
-            'mr-3 shrink-0'
-        ]
+            'mr-3 shrink-0',
+        ],
     },
     text: {
         class: [
             // Font and Text
             'text-sm leading-none',
-            'font-medium'
-        ]
+            'font-medium',
+        ],
     },
-    button: ({ props }) => ({
+    button: {
         class: [
             // Flexbox
             'flex items-center justify-center',
@@ -67,21 +67,21 @@ export default {
             'focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Misc
-            'overflow-hidden'
-        ]
-    }),
+            'overflow-hidden',
+        ],
+    },
     closeicon: {
         class: [
             // Sizing and Spacing
             'w-3 h-3',
-            'shrink-0'
-        ]
+            'shrink-0',
+        ],
     },
     transition: {
         enterFromClass: 'opacity-0',
         enterActiveClass: 'transition-opacity duration-300',
         leaveFromClass: 'max-h-40',
         leaveActiveClass: 'overflow-hidden transition-all duration-300 ease-in',
-        leaveToClass: 'max-h-0 opacity-0 !m-0'
-    }
+        leaveToClass: 'max-h-0 opacity-0 !m-0',
+    },
 };

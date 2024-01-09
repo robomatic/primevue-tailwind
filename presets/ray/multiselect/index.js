@@ -1,12 +1,12 @@
-import checkboxConfig from '../checkbox'
-import listboxConfig from '../listbox'
 import autocompleteConfig from '../autocomplete';
+import checkboxConfig from '../checkbox';
 import inputTextConfig from '../inputtext';
+import listboxConfig from '../listbox';
 
 export default {
     root: autocompleteConfig.container,
     labelContainer: {
-        class: 'overflow-hidden flex flex-auto cursor-pointer '
+        class: 'overflow-hidden flex flex-auto cursor-pointer ',
     },
     token: {
         class: [
@@ -24,8 +24,8 @@ export default {
             'text-surface-700 dark:text-white/70',
 
             // Misc
-            'cursor-default'
-        ]
+            'cursor-default',
+        ],
     },
     removeTokenIcon: {
         class: [
@@ -42,8 +42,8 @@ export default {
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-pointer'
-        ]
+            'cursor-pointer',
+        ],
     },
     trigger: {
         class: [
@@ -62,8 +62,8 @@ export default {
 
             // Shape
             'rounded-tr-md',
-            'rounded-br-md'
-        ]
+            'rounded-br-md',
+        ],
     },
     panel: {
         class: [
@@ -78,8 +78,8 @@ export default {
             // Color
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-800 dark:text-white/80',
-            'dark:border-surface-700'
-        ]
+            'dark:border-surface-700',
+        ],
     },
     header: {
         class: [
@@ -88,7 +88,7 @@ export default {
             'py-3 px-5',
             'm-0',
 
-            //Shape
+            // Shape
             'border-b',
             'rounded-tl-md',
             'rounded-tr-md',
@@ -96,11 +96,12 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-100 dark:bg-surface-800',
-            'border-surface-300 dark:border-surface-700'
-        ]
+            'border-surface-300 dark:border-surface-700',
+        ],
     },
     headerCcheckboxContainer: checkboxConfig.root,
-    headerCheckbox: ({ context, state }) => checkboxConfig.input({ props: {}, context: { checked: context?.selected, focused: state.focused } }),
+    headerCheckbox: ({ context, state }) =>
+        checkboxConfig.input({ props: {}, context: { checked: context?.selected, focused: state.focused } }),
     headercheckboxicon: checkboxConfig.icon,
     closeButton: {
         class: [
@@ -132,11 +133,11 @@ export default {
             'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
-            'overflow-hidden'
-        ]
+            'overflow-hidden',
+        ],
     },
     closeButtonIcon: {
-        class: 'w-4 h-4 inline-block'
+        class: 'w-4 h-4 inline-block',
     },
     wrapper: {
         class: [
@@ -144,14 +145,14 @@ export default {
             'max-h-[200px]',
 
             // Misc
-            'overflow-auto'
-        ]
+            'overflow-auto',
+        ],
     },
     list: {
-        class: 'py-0 list-none m-0'
+        class: 'py-0 list-none m-0',
     },
     label: {
-        class: 'flex flex-wrap gap-2'
+        class: 'flex flex-wrap gap-2',
     },
     item: listboxConfig.item,
     checkboxContainer: checkboxConfig.root,
@@ -159,7 +160,7 @@ export default {
     checkboxicon: checkboxConfig.icon,
     itemgroup: {
         class: [
-            //Font
+            // Font
             'font-bold',
 
             // Spacing
@@ -171,19 +172,19 @@ export default {
             'bg-surface-0 dark:bg-surface-600/80',
 
             // Misc
-            'cursor-auto'
-        ]
+            'cursor-auto',
+        ],
     },
     filtercontainer: {
-        class: 'relative w-full mx-2'
+        class: 'relative w-full mx-2',
     },
     filterinput: ({ state, parent }) => {
-        const input = inputTextConfig.root({ props: { value: state.filterValue }, context: {}, parent })
-        input.class.push('w-full')
-        return input
+        const input = inputTextConfig.root({ props: { value: state.filterValue }, context: {}, parent });
+        input.class.push('w-full');
+        return input;
     },
     filtericon: {
-        class: ['absolute', 'top-1/2', '-mt-2', 'right-4']
+        class: ['absolute', 'top-1/2', '-mt-2', 'right-4'],
     },
     clearicon: {
         class: [
@@ -196,8 +197,8 @@ export default {
             'right-12',
 
             // Spacing
-            '-mt-2'
-        ]
+            '-mt-2',
+        ],
     },
     emptymessage: {
         class: [
@@ -209,13 +210,13 @@ export default {
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-transparent'
-        ]
+            'bg-transparent',
+        ],
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
         leaveActiveClass: 'transition-opacity duration-100 ease-linear',
-        leaveToClass: 'opacity-0'
-    }
+        leaveToClass: 'opacity-0',
+    },
 };

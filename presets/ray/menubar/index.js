@@ -19,7 +19,7 @@ export default {
 
             // Color
             'bg-primary-600',
-        ]
+        ],
     },
     menu: ({ props }) => ({
         class: [
@@ -54,12 +54,10 @@ export default {
 
             // Misc
             'outline-none',
-        ]
+        ],
     }),
     menuitem: {
-        class: [
-            'sm:relative sm:w-auto w-full static',
-        ]
+        class: ['sm:relative sm:w-auto w-full static'],
     },
     content: ({ props, context }) => ({
         class: [
@@ -68,24 +66,27 @@ export default {
 
             //  Colors
             {
-                'text-surface-800 dark:text-white/70': !context.focused && !context.active && context.level === 0 && props?.mobileActive,
-                'text-white/80 dark:text-white/70': !context.focused && !context.active && context.level === 0 && !props?.mobileActive,
+                'text-surface-800 dark:text-white/70':
+                    !context.focused && !context.active && context.level === 0 && props?.mobileActive,
+                'text-white/80 dark:text-white/70':
+                    !context.focused && !context.active && context.level === 0 && !props?.mobileActive,
                 'text-surface-600 dark:text-surface-400': !context.focused && !context.active && context.level > 0,
                 'text-white dark:text-white/70 bg-primary-500 dark:bg-primary-500': context.focused && !context.active,
                 'text-white dark:text-white/80 bg-primary-500 dark:bg-primary-500': context.focused && context.active,
-                'text-white/80 dark:text-white/70 bg-primary-500 dark:bg-primary-500': !context.focused && context.active
+                'text-white/80 dark:text-white/70 bg-primary-500 dark:bg-primary-500':
+                    !context.focused && context.active,
             },
 
             // Hover States
             {
                 'hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white': !context.active,
-                'hover:bg-primary-500 dark:hover:bg-primary-500': context.active
+                'hover:bg-primary-500 dark:hover:bg-primary-500': context.active,
             },
 
             // Transitions
             'transition-all',
             'duration-200',
-        ]
+        ],
     }),
     action: ({ context }) => ({
         class: [
@@ -106,7 +107,7 @@ export default {
             // Size
             {
                 'pl-5 sm:pl-3': context.level === 1,
-                'pl-7 sm:pl-3': context.level === 2
+                'pl-7 sm:pl-3': context.level === 2,
             },
 
             // Misc
@@ -114,18 +115,18 @@ export default {
             'cursor-pointer',
             'no-underline ',
             'overflow-hidden',
-        ]
+        ],
     }),
     icon: {
-        class: 'mr-2'
+        class: 'mr-2',
     },
     submenuicon: ({ props, context }) => ({
         class: [
             {
                 'ml-auto sm:ml-2': props.root,
-                'ml-auto': !props.root
-            }
-        ]
+                'ml-auto': !props.root,
+            },
+        ],
     }),
     submenu: ({ props }) => ({
         class: [
@@ -146,16 +147,16 @@ export default {
             'z-10',
             {
                 'sm:absolute sm:left-full top-0 sm:-top-1 mt-0': props.level > 1,
-                'mt-2': props.level === 1
+                'mt-2': props.level === 1,
             },
 
             // Color
             'bg-surface-0 dark:bg-surface-800',
             'ring-1 ring-surface-200 dark:ring-surface-700/50',
-        ]
+        ],
     }),
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-700'
+        class: 'border-t border-surface-200 dark:border-surface-700',
     },
     button: {
         class: [
@@ -188,9 +189,9 @@ export default {
             // Misc
             'cursor-pointer',
             'no-underline',
-        ]
+        ],
     },
     end: {
-        class: 'ml-auto self-center'
-    }
+        class: 'ml-auto self-center',
+    },
 };

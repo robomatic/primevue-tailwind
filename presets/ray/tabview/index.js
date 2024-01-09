@@ -5,8 +5,8 @@ export default {
             'relative',
 
             // Misc
-            { 'overflow-hidden': props.scrollable }
-        ]
+            { 'overflow-hidden': props.scrollable },
+        ],
     }),
     navContent: {
         class: [
@@ -14,8 +14,8 @@ export default {
             'overflow-y-hidden overscroll-contain',
             'overscroll-auto',
             'scroll-smooth',
-            '[&::-webkit-scrollbar]:hidden'
-        ]
+            '[&::-webkit-scrollbar]:hidden',
+        ],
     },
     previousButton: {
         class: [
@@ -34,8 +34,8 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-primary-500 dark:text-primary-400',
-            'shadow-md'
-        ]
+            'shadow-md',
+        ],
     },
     nextButton: {
         class: [
@@ -54,8 +54,8 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-primary-500 dark:text-primary-400',
-            'shadow-md'
-        ]
+            'shadow-md',
+        ],
     },
     nav: {
         class: [
@@ -69,8 +69,8 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'border-b border-surface-200 dark:border-surface-700',
-            'text-surface-900 dark:text-surface-0/80'
-        ]
+            'text-surface-900 dark:text-surface-0/80',
+        ],
     },
     tabpanel: {
         header: ({ props }) => ({
@@ -80,9 +80,9 @@ export default {
 
                 // Misc
                 {
-                    'opacity-60 cursor-default user-select-none select-none pointer-events-none': props?.disabled
-                }
-            ]
+                    'opacity-60 cursor-default user-select-none select-none pointer-events-none': props?.disabled,
+                },
+            ],
         }),
         headerAction: ({ parent, context }) => ({
             class: [
@@ -109,9 +109,9 @@ export default {
                     'bg-surface-0 dark:bg-surface-800': parent.state.d_activeIndex !== context.index,
                     'text-surface-700 dark:text-surface-0/80': parent.state.d_activeIndex !== context.index,
 
-                    'bg-surface-0 dark:bg-surface-800': parent.state.d_activeIndex === context.index,
+                    ' bg-surface-0 dark:bg-surface-800': parent.state.d_activeIndex === context.index,
                     'border-primary-500 dark:border-primary-400': parent.state.d_activeIndex === context.index,
-                    'text-primary-500 dark:text-primary-400': parent.state.d_activeIndex === context.index
+                    'text-primary-500 dark:text-primary-400': parent.state.d_activeIndex === context.index,
                 },
 
                 // States
@@ -119,8 +119,9 @@ export default {
                 'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
                 {
                     'hover:bg-surface-0 dark:hover:bg-surface-800/80': parent.state.d_activeIndex !== context.index,
-                    'hover:border-surface-400 dark:hover:border-surface-600': parent.state.d_activeIndex !== context.index,
-                    'hover:text-surface-900 dark:hover:text-surface-0': parent.state.d_activeIndex !== context.index
+                    'hover:border-surface-400 dark:hover:border-surface-600':
+                        parent.state.d_activeIndex !== context.index,
+                    'hover:text-surface-900 dark:hover:text-surface-0': parent.state.d_activeIndex !== context.index,
                 },
 
                 // Transitions
@@ -130,15 +131,15 @@ export default {
                 'cursor-pointer select-none text-decoration-none',
                 'overflow-hidden',
                 'user-select-none',
-                'whitespace-nowrap'
-            ]
+                'whitespace-nowrap',
+            ],
         }),
         headerTitle: {
             class: [
                 // Text
                 'leading-none',
-                'whitespace-nowrap'
-            ]
+                'whitespace-nowrap',
+            ],
         },
         content: {
             class: [
@@ -151,8 +152,8 @@ export default {
                 // Colors
                 'bg-surface-0 dark:bg-surface-800',
                 'text-surface-700 dark:text-surface-0/80',
-                'border-0'
-            ]
-        }
-    }
+                'border-0',
+            ],
+        },
+    },
 };

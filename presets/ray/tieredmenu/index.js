@@ -11,8 +11,8 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
-            'ring-1 ring-surface-200 dark:ring-surface-700'
-        ]
+            'ring-1 ring-surface-200 dark:ring-surface-700',
+        ],
     },
     menu: {
         class: [
@@ -20,23 +20,21 @@ export default {
             'list-none',
             'm-0',
             'p-0',
-            'outline-none'
-        ]
+            'outline-none',
+        ],
     },
     menuitem: {
-        class: [
-            'relative'
-        ]
+        class: ['relative'],
     },
     content: ({ context }) => ({
         class: [
-            //Shape
+            // Shape
             'rounded-md',
-            
+
             // Colors
             {
                 'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-500/10 dark:text-primary-400': context.focused
+                'bg-surface-100 text-primary-500 dark:bg-surface-500/10 dark:text-primary-400': context.focused,
             },
 
             // Transitions
@@ -45,8 +43,8 @@ export default {
 
             // States
             'hover:text-primary-600 dark:hover:text-primary-400 ',
-            'hover:bg-surface-100 dark:hover:bg-surface-500/20'
-        ]
+            'hover:bg-surface-100 dark:hover:bg-surface-500/20',
+        ],
     }),
     action: {
         class: [
@@ -67,25 +65,25 @@ export default {
             'no-underline',
             'overflow-hidden',
             'cursor-pointer',
-            'select-none'
-        ]
+            'select-none',
+        ],
     },
     icon: {
         class: [
             // Spacing
             'mr-2',
             'leading-6',
-            'text-base'
-        ]
+            'text-base',
+        ],
     },
     label: {
-        class: ['leading-none', 'text-base']
+        class: ['leading-none', 'text-base'],
     },
     submenuicon: {
         class: [
             // Position
-            'ml-auto'
-        ]
+            'ml-auto',
+        ],
     },
     submenu: {
         class: [
@@ -106,10 +104,10 @@ export default {
             'z-10',
 
             // Color
-            'bg-surface-0 dark:bg-surface-700'
-        ]
+            'bg-surface-0 dark:bg-surface-700',
+        ],
     },
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
+        class: 'border-t border-surface-200 dark:border-surface-600 my-1',
     },
 };

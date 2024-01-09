@@ -9,9 +9,9 @@ export default {
 
             // Misc
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
-        ]
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+            },
+        ],
     }),
     cancelitem: ({ context }) => ({
         class: [
@@ -19,14 +19,14 @@ export default {
             'inline-flex items-center',
             'rounded-full',
 
-            //State
+            // State
             {
-                'outline-none ring ring-primary-500/50 dark:ring-primary-500/50': context.focused
+                'outline-none ring ring-primary-500/50 dark:ring-primary-500/50': context.focused,
             },
 
             // Misc
-            'cursor-pointer'
-        ]
+            'cursor-pointer',
+        ],
     }),
     cancelicon: {
         class: [
@@ -40,8 +40,8 @@ export default {
             'hover:text-danger-600 dark:hover:text-danger-500',
 
             // Transition
-            'transition duration-200 ease-in'
-        ]
+            'transition duration-200 ease-in',
+        ],
     },
     item: ({ props, context }) => ({
         class: [
@@ -51,15 +51,15 @@ export default {
 
             // State
             {
-                'outline-none ring ring-primary-500/50 dark:ring-primary-500/50': context.focused
+                'outline-none ring ring-primary-500/50 dark:ring-primary-500/50': context.focused,
             },
 
             // Misc
             {
                 'cursor-pointer': !props.readonly,
-                'cursor-default': props.readonly
-            }
-        ]
+                'cursor-default': props.readonly,
+            },
+        ],
     }),
     officon: ({ props }) => ({
         class: [
@@ -73,8 +73,8 @@ export default {
             { 'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly },
 
             // Transition
-            'transition duration-200 ease-in'
-        ]
+            'transition duration-200 ease-in',
+        ],
     }),
     onicon: ({ props }) => ({
         class: [
@@ -88,7 +88,7 @@ export default {
             { 'hover:text-primary-600 dark:hover:text-primary-400': !props.readonly },
 
             // Transition
-            'transition duration-200 ease-in'
-        ]
-    })
+            'transition duration-200 ease-in',
+        ],
+    }),
 };

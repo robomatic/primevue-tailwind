@@ -1,4 +1,4 @@
-import inputTextConfig from '../inputtext'
+import inputTextConfig from '../inputtext';
 
 export default {
     root: ({ props }) => ({
@@ -14,25 +14,25 @@ export default {
             // Color
             'text-surface-900 dark:text-surface-0',
 
-            //States
+            // States
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
-        ]
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled,
+            },
+        ],
     }),
     container: ({ props, parent }) => {
-        const input = inputTextConfig.root({ props, context: { disabled: props.disabled }, parent })
-        input.class.push('flex items-center flex-wrap gap-2 w-full')
-        return input
+        const input = inputTextConfig.root({ props, context: { disabled: props.disabled }, parent });
+        input.class.push('flex items-center flex-wrap gap-2 w-full');
+        return input;
     },
     inputtoken: {
-        class: ['inline-flex flex-auto']
+        class: ['inline-flex flex-auto'],
     },
     input: ({ props, parent }) => {
         if (props.multiple) {
-            return { class: ['p-0 w-full outline-none shadow-none rounded-none ring-none bg-transparent border-0'] }
+            return { class: ['p-0 w-full outline-none shadow-none rounded-none ring-none bg-transparent border-0'] };
         }
-        return inputTextConfig.root({ props, context: { disabled: props.disabled }, parent })
+        return inputTextConfig.root({ props, context: { disabled: props.disabled }, parent });
     },
     token: {
         class: [
@@ -48,11 +48,11 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-white/70',
-            'bg-surface-200 dark:bg-surface-700'
-        ]
+            'bg-surface-200 dark:bg-surface-700',
+        ],
     },
     label: {
-        class: 'leading-5'
+        class: 'leading-5',
     },
     removeTokenIcon: {
         class: [
@@ -69,8 +69,8 @@ export default {
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-pointer'
-        ]
+            'cursor-pointer',
+        ],
     },
     dropdownbutton: {
         root: {
@@ -95,12 +95,15 @@ export default {
                 // States
                 'hover:bg-surface-200 dark:hover:bg-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
-            ]
-        }
+                'focus:ring-primary-500 dark:focus:ring-primary-400',
+            ],
+        },
     },
     loadingicon: {
-        class: ['text-sm leading-none text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[0.5rem] -mt-2']
+        class: [
+            'text-sm leading-none text-surface-500 dark:text-surface-0/70',
+            'absolute top-[50%] right-[0.5rem] -mt-2',
+        ],
     },
     panel: {
         class: [
@@ -117,11 +120,11 @@ export default {
             // Color
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-800 dark:text-white/80',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700'
-        ]
+            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
+        ],
     },
     list: {
-        class: 'py-1 list-none m-0'
+        class: 'py-1 list-none m-0',
     },
     item: ({ context }) => ({
         class: [
@@ -143,21 +146,24 @@ export default {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-            { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+            {
+                'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700':
+                    context.focused && context.selected,
+            },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
-            //States
+            // States
             'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
 
             // Misc
             'cursor-pointer',
             'overflow-hidden',
-            'whitespace-nowrap'
-        ]
+            'whitespace-nowrap',
+        ],
     }),
     itemgroup: {
         class: [
-            //Font
+            // Font
             'font-bold',
             'text-base',
 
@@ -170,8 +176,8 @@ export default {
             'bg-surface-0 dark:bg-surface-600/80',
 
             // Misc
-            'cursor-auto'
-        ]
+            'cursor-auto',
+        ],
     },
     emptymessage: {
         class: [
@@ -184,13 +190,13 @@ export default {
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-transparent'
-        ]
+            'bg-transparent',
+        ],
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
         leaveActiveClass: 'transition-opacity duration-100 ease-linear',
-        leaveToClass: 'opacity-0'
-    }
+        leaveToClass: 'opacity-0',
+    },
 };
